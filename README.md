@@ -1,0 +1,1 @@
+This project was created for the hostel as a special order. In fact, it was used and maintained. This project implements a telegram bot, authorization, and various pages with the work of the database. The user interface is made using MudBlazor, Bootstrap. The architecture is built as follows - server + client + client
