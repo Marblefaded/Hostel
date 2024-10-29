@@ -1,0 +1,82 @@
+﻿@page "/ApplicationTypes"
+@inherits ApplicationTypesView
+
+<AuthorizeView Roles="Administrator,SysAdmin">
+    <Authorized>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-16 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Виды заявлений</h3>
+                </div>
+                <div class="my-3 text-center">
+                    <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Custom.FileFormats.FilePdf" Color="Color.Error" @onclick="AddItemDialog">Создать</MudButton>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (Model == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@Model" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                    <MudTh>#</MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimTemplateViewModel, object>(x=>x.Title)">
+                            Название заявления
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate Context="item">
+                <MudTd DataLabel="#">@item.ClaimTemplateId</MudTd>
+                <MudTd DataLabel="Название заявления">@item.Title</MudTd>
+                <MudTd>
+                    <MudTooltip Text="Просмотр">
+                        <MudIconButton Icon="@Icons.Material.Outlined.Preview" Color="Color.Default" @onclick="(() => OpenFileDialogAsync(item))"></MudIconButton>
+                    </MudTooltip>
+                    <MudTooltip Text="Редактирование">
+                        <MudIconButton Icon="@Icons.Material.Outlined.Edit" Color="Color.Default" @onclick="(() => EditItemDialog(item))"></MudIconButton>
+                    </MudTooltip>
+                    <MudTooltip Text="Скачать">
+                        <MudIconButton Icon="@Icons.Material.Outlined.FileDownload" Color="Color.Success" @onclick="@(async() => {await DownloadPdf(item); })"></MudIconButton>
+                    </MudTooltip>
+                    @if (!item.IsDeleteEnabled)
+                    {
+                        <MudTooltip Text="Удаление невозможно т.к есть связнные записи">
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Disabled="true" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                    }
+                    else
+                    {
+                        <MudTooltip Text="Удалить">
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                    }
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
+@code {
+    private bool bordered = true;
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+}

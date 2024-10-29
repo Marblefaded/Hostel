@@ -1,0 +1,143 @@
+﻿@page "/LogApplication"
+@inherits LogApplicationView
+
+<AuthorizeView Roles="SysAdmin">
+    <Authorized>
+<div class="сontainer">
+    <div class="d-flex justify-content-center">
+        <div class="col-16 col-md-auto">
+            <div class="my-3 text-center">
+                <h3>Лист ошибок</h3>
+            </div>
+            <div class="my-3 text-center">
+                <MudStack Row="true">
+                    <input type="date" class="form-control-sm" placeholder="Поиск..." @bind-value="@FilterValue" @bind-value:event="oninput" />
+                    <input style="margin-left:10px;" type="text" class="form-control-sm" placeholder="Поиск..." @bind-value="@FilterError" @bind-value:event="oninput" />
+                </MudStack>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+    @if (Model == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@Model" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.LogApplicationViewModel, object>(x=>x.LogApplicationId)">
+                        #
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.LogApplicationViewModel, object>(x=>x.Message)">
+                        Сообщение об ошибке
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.LogApplicationViewModel, object>(x=>x.Date)">
+                        Дата
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.LogApplicationViewModel, object>(x=>x.UserName)">
+                        Пользователь
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.LogApplicationViewModel, object>(x=>x.AppVersion)">
+                        Версия
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTooltip Text="Экспорт в Excel">
+                        <MudIconButton Icon="@Icons.Custom.FileFormats.FileExcel" Color="Color.Success" @onclick="(() => ExportToExcel(CurrentItem))"></MudIconButton>
+                    </MudTooltip>
+                <MudTooltip Text="Выбрать всё">
+                    <MudIconButton Icon="@Icons.Material.Filled.DoneAll" @onclick="AllChange"></MudIconButton>
+                </MudTooltip>
+                    <MudMenu AnchorOrigin="@AnchorOrigin" TransformOrigin="@TransformOrigin" FullWidth="true">
+                        <ActivatorContent>
+                            <MudTooltip Text="Удалить">
+                                <MudButton Color="Color.Error" Variant="Variant.Outlined" aria-label="delete">Удалить</MudButton>
+                            </MudTooltip>
+                        </ActivatorContent>
+                        <ChildContent>
+                            <MudMenuItem @onclick="DeleteAllItemsAsync">Удалить всё</MudMenuItem>
+                            <MudMenuItem @onclick="(() => DeleteSelectedItemAsync())">Удалить выбранные элементы</MudMenuItem>
+                            @* @if (Model.FindIndex(Enable))
+                            {
+                                <MudMenuItem @onclick="(() => DeleteSelectedItemAsync())">Удалить выбранные элементы</MudMenuItem>
+                            }
+                            else
+                            {
+
+                            } *@
+
+                        </ChildContent>
+                    </MudMenu>
+                </MudTh>
+                <MudTh>
+                </MudTh>
+            </HeaderContent>
+            <RowTemplate Context="item">
+                <MudTd DataLabel="#">@item.LogApplicationId</MudTd>
+                <MudTd DataLabel="Сообщение об ошибке">@item.Message</MudTd>
+                <MudTd DataLabel="Дата">@item.Date</MudTd>
+                <MudTd DataLabel="Пользователь">@item.UserName</MudTd>
+                <MudTd DataLabel="Версия">@item.AppVersion</MudTd>
+                <MudTd>
+                    <MudTooltip Text="StackTrace">
+                        <MudIconButton Icon="@Icons.Material.Filled.Info" @onclick="(() => StackTraceDialog(item))"></MudIconButton>
+                    </MudTooltip>
+                    @if(item.IsDeleted == true)
+                    {
+                        <MudTooltip Text="Восстановить">
+                            <MudIconButton Icon="@Icons.Material.Outlined.Restore" @onclick="(() => RestoreItemAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                        <MudTooltip Text="Удалить">
+                            <MudIconButton Icon="@Icons.Material.Outlined.DeleteForever" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemForeverAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                    }
+                    else
+                    {
+                        <MudTooltip Text="Удалить">
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                    }
+                    @if (item.IsEnableDelete == true)
+                    {
+                        <input type="checkbox" checked @onchange='()=> Change(item)' />
+                    }
+                    else
+                    {
+                        <input type="checkbox" @onchange='()=> Change(item)' />
+                    }
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+
+    public Origin TransformOrigin { get; set; } = Origin.TopCenter;
+    public Origin AnchorOrigin { get; set; } = Origin.BottomCenter;
+}

@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] СУО №1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Suo.Client.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Общежитие №1</a>
+                <button class="navbar-toggler p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="custom-toggle-btn">
+                        <span class="line l1"></span>
+                        <span class="line l2"></span>
+                        <span class="line l3"></span>
+                    </div>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 d-flex align-items-center">
+                        @* <li class="nav-item"> *@
+                        @*     <a class="nav-link" asp-area="" asp-controller="Claims" asp-action="Claims">Заявления</a> *@
+                        @* </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Post" asp-action="News">Новости</a>
+                        </li>
+                        @* <li class="nav-item"> *@
+                        @*     <div class="dropdown"> *@
+                        @*         <a class="nav-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"> *@
+                        @*             Создать заявление *@
+                        @*         </a> *@
+                        @*         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"> *@
+                        @*             <li id="claimsli"> *@
+                        @* *@
+                        @*                 @*<a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"> *@
+                        @*                     @c.Title *@
+                        @*                     </a> *@
+                        @* *@
+                        @*                     @foreach (ClaimTemplate c in Model.claimTemplates) *@
+                        @*                     { *@
+                        @*                     <a type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"> *@
+                        @*                     @c.Title *@
+                        @*                     </a> *@
+                        @*                     }*@
+                        @*             </li> *@
+                        @*             $1$</form>#1# *@
+                        @*         </ul> *@
+                        @*     </div> *@
+                        @* </li> *@
+                    </ul>
+                    <form method="post" class="d-flex justify-content-center" asp-area="" asp-controller="Login" asp-action="Logout">
+                        <button type="submit" class="nav-link" style="fill: var(--light-blue); background: transparent; border: none; padding-right: 0">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" id="main">
+        <div class="container" style="flex: 1">
+            @RenderBody()
+        </div>
+        <footer class="border-top footer text-muted">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    &copy; 2023 - SUO
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Aвторы</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Заявление</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row mb-1">
+                            <div class="mb-1">
+                                <label class="col-12">Выбор Коменданта</label>
+                                <select name="managerid" class="form-select col-12">
+                                    <option value="1">Лейман А.К.</option>
+                                    <option value="2">Жамьянов И.Ю.</option>
+                                </select>
+                            </div>
+
+                            <input type="number" id="ClaimTemplateId" hidden name="ClaimTemplateId"/>
+                            <input type="number" hidden id="ClaimTypeId" name="ClaimTypeId"/>
+                            @*                        <input type="number" hidden name="claim.ClaimTemplateId" value="@Model.SelectedClaimId" />
+                            <input type="number" hidden name="claim.ClaimTypeId" value="@Model.SelectedClaimTypeId" />*@
+                            <div id="TimeToGo" style="display:none;">
+                                <label class="col-12">Приблизильное время прибытия</label>
+
+                                <div class="col-12">
+                                    <input class="w-100 mb-1 form-control" id="TimeToGoI" type="time" name="TimeToGo" min="00:00:00" max="06:00:00" value="" />
+                                </div>
+                            </div>
+
+                            <div id="TimeToStart" style="display:none;">
+                                <label class="col-12">Дата отбытия</label>
+                                <div class="col-12">
+                                    <input class="w-100 mb-1 form-control" min="@DateTime.Now.ToString("yyyy-MM-dd")" max="@DateTime.Now.AddDays(120).ToString("yyyy-MM-dd")" id="TimeToStartI" type="date" name="TimeToStart" value="" />
+                                </div>
+                            </div>
+
+                            <div id="TimeToEnd" style="display:none;">
+                                <label class="col-12">Дата прибытия</label>
+                                <div class="col-12">
+                                    <input class="w-100 mb-1 form-control" id="TimeToEndI" min="@DateTime.Now.ToString("yyyy-MM-dd")" max="@DateTime.Now.AddDays(120).ToString("yyyy-MM-dd")" type="date" name="TimeToEnd" value="" />
+                                </div>
+                            </div>
+                            <div id="Reason" style="display:none;">
+                                <label class="col-6">Причина</label>
+                                <div class="col-12">
+                                    <textarea class="w-100 form-control" id="ReasonI" name="ClaimJson" style="height: 180px"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <input type="submit" value="Отправить" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    @* <script> *@
+    @*          *@
+    @*         document.addEventListener("DOMContentLoaded", async function (event) { *@
+    @* *@
+    @*             let authtoken = document.cookie.split(";")[1].replace('authToken=', ''); *@
+    @*             //alert(authtoken); *@
+    @* *@
+    @*             let response = await fetch("Claims/GetClaims", { *@
+    @*                 method: 'POST', *@
+    @*                 headers: { *@
+    @*                     Authentication: 'Bearer ' + authtoken, *@
+    @*                 } *@
+    @*             }); *@
+    @*             let result = await response.json(); *@
+    @* *@
+    @* *@
+    @*             var li = document.getElementById("claimsli"); *@
+    @* *@
+    @*             for (var i = 0; i < result.length; i++) { *@
+    @*                 //var parent = document.getElementById('div'); *@
+    @*                 let a = document.createElement("a"); *@
+    @*                 a.dataset.bsToggle = 'modal'; *@
+    @* *@
+    @*                 a.dataset.bsTarget = '#exampleModal'; *@
+    @*                 a.dataset.ClaimTypeId = result[i].ClaimTypeId; *@
+    @*                 a.dataset.ClaimTemplateId = result[i].ClaimTemplateId; *@
+    @*                 a.type = "button"; *@
+    @*                 a.classList.add("dropdown-item"); *@
+    @*                 a.textContent = result[i].Title; *@
+    @*                 //let item = result[i]; *@
+    @*                 a.onclick = function (e) { *@
+    @*                     document.getElementById("ClaimTypeId").value = e.currentTarget.dataset.ClaimTypeId; *@
+    @*                     document.getElementById("ClaimTemplateId").value = e.currentTarget.dataset.ClaimTemplateId; *@
+    @*                 } *@
+    @*                 li.appendChild(a); *@
+    @* *@
+    @*             } *@
+    @*             //response.json().then(x=> alert(x)); *@
+    @*             //alert(result); *@
+    @*         }); *@
+    @* *@
+    @* *@
+    @* *@
+    @*     </script> *@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

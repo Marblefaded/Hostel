@@ -1,0 +1,60 @@
+﻿@inherits Suo.Autorization.Pages.Post.EditPostsView
+
+<EditForm Model="@ViewModel.Item" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <MudDialog>
+        <TitleContent>
+            <div style="border-bottom: 1px solid grey; padding-bottom: 15px;" class="d-flex justify-content-between">
+                <MudText Typo="Typo.h6">
+                    @Title
+                </MudText>
+            </div>
+        </TitleContent>
+        <DialogContent>
+            <span style="color:red; font-size:15px;">
+                @if (ViewModel.IsConcurency)
+                {
+                    @ViewModel.ConcurencyErrorText
+                }
+            </span>
+            <div class="form-group row mb-1">
+                <div>
+                    <MudTextField Label="Название" Immediate="true" @bind-Value="ViewModel.Item.Title" id="Title" />
+                    <ValidationMessage For="@(()=>ViewModel.Item.Title)" />
+                </div>
+                <div>
+                    <MudTextField Label="Текст" Immediate="true" @bind-Value="ViewModel.Item.Text" Lines="7" id="Text" />
+                    <ValidationMessage For="@(()=>ViewModel.Item.Text)" />
+                </div>
+                <div class="row" style="margin-top:20px;text-align: center;margin-top: 20px;margin-left: 1px;margin-right: 2px;">
+                    <span class="btn btn-danger" @onclick="@LoadFiles">Добавить изображение</span>
+                    <InputFile id="loaderImage" style="display:none" OnChange="@SaveFiles" multiple />
+                </div>
+                <div class="row" style="margin-top:20px; text-align: center;margin-top: 20px;margin-left: 1px;margin-right: 2px;">
+                    @foreach (var i in ViewModel.ListSring)
+                    {
+                        string newLink = Path.Combine("Accets", i);
+                        @if (ViewModel.ListSring == null)
+                        {
+                            <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+                                <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute;margin-bottom:60%" />
+                            </MudGrid>
+                        }
+                        else
+                        {
+                            <div class="image-block">
+                                <div>
+                                    <img src="@newLink" alt="" />
+                                </div>
+                                <span class="delete-btn" @onclick="@(() => DeleteSingleFile(i))"></span>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </DialogContent>
+        <DialogActions>
+            <MudButton Style="margin-right: 11px;margin-bottom: 10px" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success">Сохранить</MudButton>
+        </DialogActions>
+    </MudDialog>
+</EditForm>

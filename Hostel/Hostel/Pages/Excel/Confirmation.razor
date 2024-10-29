@@ -1,0 +1,40 @@
+﻿@inherits ConfirmationView
+
+<MatDialog @bind-IsOpen="ViewModel.DialogIsOpen" CanBeClosed="false">
+    <MatDialogTitle style="color:#424242; background-color:#424242;">
+        <span style="top: 20px; color:white;">Подтверждение</span>&nbsp;
+        <div class="d-flex justify-content-between">
+            <div class="position-absolute top-0 end-0" style="margin-top: 5px;margin-right: 5px;">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" @onclick="(() =>{ ClearTables.InvokeAsync();ViewModel.DialogIsOpen=false;})">
+                    Принять
+                </MudButton>
+                <MudIconButton Icon="@Icons.Material.Outlined.Cancel" Variant="Variant.Filled" Color="Color.Error" aria-label="delete" @onclick="@(e => ViewModel.DialogIsOpen = false)">
+                </MudIconButton>
+            </div>
+        </div>
+    </MatDialogTitle>
+    <MatDialogContent style="width: 100%; padding-top: 10px; color:#424242; background-color:#424242;">
+        <div class="form-group row mb-1">
+            <h4 style="color:white;">Вы уверены, что желаете очистить таблицы?</h4>
+        </div>
+    </MatDialogContent>
+    <MatDialogActions style="color:#424242; background-color:#424242;">
+        <div class="d-flex justify-content-between">
+            <div class="position-absolute bottom-0 end-0" style="margin-right: 10px; margin-bottom: 10px;">
+            </div>
+        </div>
+    </MatDialogActions>
+</MatDialog>
+
+
+@code
+{
+    [Parameter] public ConfirmationView ViewModel { get; set; }
+}
+
+
+
+
+
+
+

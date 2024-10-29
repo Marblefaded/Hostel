@@ -1,0 +1,84 @@
+﻿@inherits EditUserRoomView
+<style>
+    .mud-dialog .mud-dialog-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+</style>
+<MudDialog Style="width: 100%">
+    <TitleContent>
+        <EditForm Model="@ViewModel" Context="item" OnValidSubmit="Save">
+            <div style="border-bottom: 1px solid grey; padding-bottom: 15px;" class="d-flex justify-content-between">
+                <MudText Typo="Typo.h6">
+                    @Title
+                </MudText>
+                <MudButton StartIcon="@Icons.Material.Outlined.Check" Variant="Variant.Filled" Color="Color.Success" ButtonType="ButtonType.Submit" style="outline: 0 !important; margin-right: 3%" @onclick="@(()=>Save())">
+                    Сохранить
+                </MudButton>
+            </div>
+        </EditForm>
+    </TitleContent>
+    <DialogContent>
+        @* <p style=" text-align:center">Комната номер @ViewModel.RoomModels.FirstOrDefault(x => x.RoomId == ViewModel.RoomModelId).NumberRoom</p> *@
+        @* <div style="text-align:center">
+        Поиск <input type="text" style="margin:5px" placeholder="Поиск.." @bind-value="@FilterVar" @bind-value:event="oninput" />
+        </div> *@
+        <div>
+            <MudSimpleTable Style="height: 300px; width: 98%; margin-left: 1%;">
+                <thead>
+                    <tr>
+                        <th>Заселен</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewModel.UserRoomModels)
+                    {
+                        <tr>
+                            @if (item.RoomId == ViewModel.RoomModelId)
+                            {
+                                <td style="border-bottom-width:0px; padding-top: 0px; padding-bottom: 0px">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Remove" style="outline: 0 !important;" @onclick="@(()=>RemoveItem(item))">
+                                    </MudIconButton>
+                                    <span> @ViewModel.UserModels.FirstOrDefault(x=>x.UserId==item.UserId).Name </span>
+                                    <span> @ViewModel.UserModels.FirstOrDefault(x=>x.UserId==item.UserId).Surname </span>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </MudSimpleTable>
+            <MudTable Items="@ViewModel.UnsettledUserModels" FixedHeader="true" Height="300px" Style="width: 98%; margin-left: 1%">
+                <HeaderContent>
+                    <MudTh>Не заселен</MudTh>
+                    <MudTh>
+                        <input type="text" style="margin-left:55%" placeholder="Поиск.." @bind-value="@FilterVar" @bind-value:event="oninput" />
+                    </MudTh>
+                </HeaderContent>
+                <RowTemplate Context="item">
+                    @if (ViewModel.maxPeople)
+                    {
+                        <MudIconButton Icon="@Icons.Material.Filled.Add" style="outline: 0 !important;" @onclick="@(()=>AddItem(item))" Disabled>
+                    </MudIconButton>
+                        <span>@item.Name </span>
+                        <span>@item.Surname </span>
+                    }
+                    else
+                    {
+                        <MudTd style="border-bottom-width:0px">
+                            <MudIconButton Icon="@Icons.Material.Filled.Add" style="outline: 0 !important;" @onclick="@(()=>AddItem(item))">
+                            </MudIconButton>
+                            <span>@item.Name </span>
+                            <span>@item.Surname </span>
+                        </MudTd>
+                    }
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager RowsPerPageString="Кол-во записей таблицы" PageSizeOptions="new int[]{50, 100}" />
+                </PagerContent>
+            </MudTable>
+        </div>
+    </DialogContent>
+    <DialogActions>
+    </DialogActions>
+</MudDialog>
+

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "cMN1VoUMzD0=",
+  "success": true,
+  "projectFilePath": "D:\\Hostel\\Hostel\\GlobalSpecialWords\\GlobalSpecialWords.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.8\\microsoft.aspnetcore.authorization.7.0.8.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.8\\microsoft.aspnetcore.metadata.7.0.8.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\sitni\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

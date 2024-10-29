@@ -1,0 +1,132 @@
+﻿@page "/UserRoom"
+@inherits UserRoomUi
+
+<AuthorizeView Context="Context3" Roles="Administrator,SysAdmin">
+    <Authorized>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-6 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Комнаты</h3>
+                </div>
+                <div class="my-3 text-center">
+                    <MudStack Row="true">
+                        @if (RoomModels != null)
+                        {
+                            <div class="d-flex justify-content-between">
+                                <div class="row align-items-center">
+                                    <div class="col-md-auto col-sm-4" style="padding: 5px">
+                                        <input type="text" class="form-control" placeholder="Поиск..." @bind-value="@FilterVar" @bind-value:event="oninput" />
+                                    </div>
+                                    <div class="col-md-auto col-sm-4">
+                                        <EditForm Model="@RoomModels" style="padding: 5px">
+                                            <InputSelect @bind-Value="@FloorVar" class="form-select" style="min-width:125px;">
+                                                <option value=-1>Все этажи</option>
+                                                <option value=3>3 этаж</option>
+                                                <option value=4>4 этаж</option>
+                                                <option value=5>5 этаж</option>
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                    <div class="col-md-auto col-sm-4">
+                                        <EditForm Model="@RoomModels" style="padding: 5px">
+                                            <InputSelect @bind-Value="@PopVar" class="form-select" style="min-width:150px;">
+                                                <option value=-1>Все комнаты</option>
+                                                <option value=1>Заселённые</option>
+                                                <option value=2>Не заселённые</option>
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </MudStack>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (RoomModels == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@RoomModels" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.RoomViewModel, object>(x=>x.NumberRoom)">
+                        Комната
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.RoomViewModel, object>(x=>x.Floor)">
+                        Этаж
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.RoomViewModel, object>(x=>x.RoomTypeId)">
+                        Заселена
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.RoomViewModel, object>(x=>x.PeopleMax)">
+                        Кол-во
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh></MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate Context="item">
+                <MudTd DataLabel="Комната">@item.NumberRoom</MudTd>
+                <MudTd DataLabel="Этаж">@item.Floor</MudTd>
+                <MudTd DataLabel="Заселена">
+                    @if (item.RoomTypeId == 1)
+                    {
+                        <input type="checkbox" checked @onchange='()=> Change(item)' />
+                    }
+                    else
+                    {
+                        <input type="checkbox" @onchange='()=> Change(item)' />
+                    }
+                </MudTd>
+                <MudTd>@item.PeopleMax</MudTd>
+                <MudTd>
+                    <MudSimpleTable Bordered="@bordered" Style="overflow-x: auto;">
+                        @foreach (var item2 in RoomUserModels)
+                        {
+                            @if (item2.RoomId == item.RoomId)
+                            {
+                                <MudTr>
+                                    <MudTd DataLabel="Имя" style="width:33%">
+                                        @UserModels.FirstOrDefault(x=>x.UserId==item2.UserId).Name
+                                    </MudTd>
+                                    <MudTd DataLabel="Фамилия" style="width:33%">
+                                        @UserModels.FirstOrDefault(x=>x.UserId==item2.UserId).Surname
+                                    </MudTd>
+                                    <MudTd DataLabel="Телефон" style="width:33%">
+                                        @UserModels.FirstOrDefault(x=>x.UserId==item2.UserId).PhoneNumber
+                                    </MudTd>
+                                </MudTr>
+                            }
+                        }
+                    </MudSimpleTable>
+                </MudTd>
+                <MudTd>
+                    <MudIconButton Icon="@Icons.Material.Outlined.Edit" ButtonType="ButtonType.Submit" style="outline: 0 !important;" @onclick="@(()=>AddEmploersDialog(item.RoomId))">
+                    </MudIconButton>
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+         <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+

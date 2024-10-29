@@ -1,0 +1,75 @@
+﻿@page "/About"
+
+<AuthorizeView Roles="Administrator,SysAdmin, Headman">
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-4 col-md-auto">
+                <br />
+                <h3>Об авторах</h3>
+                <br />
+            </div>
+        </div>
+    </div>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 col-md-auto">
+                <div class="d-flex justify-content-between" style="margin-left:50px">
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardContent>
+                            <MudAvatar Style="height:70px; width:70px; font-size:2rem; margin-top: 20px">
+                                <MudImage Src="Stukoww.jpg"></MudImage>
+                            </MudAvatar>
+                            <MudText>Stukow</MudText>
+                            <MudText Typo="Typo.body2">Главный по телеграмму и дежурствам</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardContent>
+                            <MudAvatar Style="height:70px; width:70px; font-size:2rem; margin-top: 20px">
+                                <MudImage Src="vann.jpeg"></MudImage>
+                            </MudAvatar>
+                            <MudText>Prodig1051</MudText>
+                            <MudText Typo="Typo.body2">Наш сенсей</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardContent>
+                            <MudAvatar Style="height:70px; width:70px; font-size:2rem; margin-top: 20px">
+                                <MudImage Src="Kjs.jpg"></MudImage>
+                            </MudAvatar>
+                            <MudText>Kjs</MudText>
+                            <MudText Typo="Typo.body2">Главный по Excel</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 col-md-auto">
+                <div class="d-flex justify-content-between" style="margin-left:50px">
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardContent>
+                            <MudAvatar Style="height:70px; width:70px; font-size:2rem; margin-top: 20px">
+                                <MudImage Src="FlexSupers.jpg"></MudImage>
+                            </MudAvatar>
+                            <MudText>FlexSupers</MudText>
+                            <MudText Typo="Typo.body2">Главный по дизайну и PDF</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardContent>
+                            <MudAvatar Style="height:70px; width:70px; font-size:2rem; margin-top: 20px">
+                                <MudImage Src="marblefade.jpg"></MudImage>
+                            </MudAvatar>
+                            <MudText>Marblefade</MudText>
+                            <MudText Typo="Typo.body2">Главный по авторизации</MudText>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            </div>
+        </div>
+    </div>
+</AuthorizeView>
+

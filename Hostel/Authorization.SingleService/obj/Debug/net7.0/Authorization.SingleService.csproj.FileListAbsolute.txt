@@ -1,0 +1,411 @@
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\appsettings.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.staticwebassets.runtime.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.exe
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.deps.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.runtimeconfig.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Humanizer.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.AssemblyReference.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfoInputs.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfo.cs
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CoreCompileInputs.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cs
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.Authorization.SingleService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.build.Authorization.SingleService.props
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Authorization.SingleService.props
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Authorization.SingleService.props
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\bundle\Authorization.SingleService.styles.css
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\projectbundle\Authorization.SingleService.bundle.scp.css
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CopyComplete
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\refint\Authorization.SingleService.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.genruntimeconfig.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\ref\Authorization.SingleService.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\libman.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\appsettings.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\libman.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.staticwebassets.runtime.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.exe
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.deps.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.runtimeconfig.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Humanizer.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.AssemblyReference.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfoInputs.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfo.cs
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CoreCompileInputs.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cs
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.Authorization.SingleService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.build.Authorization.SingleService.props
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Authorization.SingleService.props
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Authorization.SingleService.props
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\bundle\Authorization.SingleService.styles.css
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\scopedcss\projectbundle\Authorization.SingleService.bundle.scp.css
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CopyComplete
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\refint\Authorization.SingleService.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.genruntimeconfig.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService\obj\Debug\net7.0\ref\Authorization.SingleService.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\appsettings.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\libman.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.staticwebassets.runtime.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.exe
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.deps.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.runtimeconfig.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Humanizer.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.AssemblyReference.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfoInputs.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfo.cs
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CoreCompileInputs.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cs
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.Authorization.SingleService.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.build.Authorization.SingleService.props
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Authorization.SingleService.props
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Authorization.SingleService.props
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\bundle\Authorization.SingleService.styles.css
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\projectbundle\Authorization.SingleService.bundle.scp.css
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CopyComplete
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\refint\Authorization.SingleService.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.genruntimeconfig.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService\obj\Debug\net7.0\ref\Authorization.SingleService.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\appsettings.Development.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\appsettings.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\libman.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.staticwebassets.runtime.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.exe
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.deps.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.runtimeconfig.json
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.pdb
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Azure.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Azure.Identity.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Humanizer.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.CodeDom.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Authorization.SingleService.Infrastructure.pdb
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.AssemblyInfo.cs
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.MvcApplicationPartsAssemblyInfo.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.RazorAssemblyInfo.cs
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.Authorization.SingleService.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.build.Authorization.SingleService.props
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Authorization.SingleService.props
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Authorization.SingleService.props
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.build.json
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\staticwebassets.development.json
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\bundle\Authorization.SingleService.styles.css
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\scopedcss\projectbundle\Authorization.SingleService.bundle.scp.css
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.csproj.CopyComplete
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.dll
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\refint\Authorization.SingleService.dll
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.pdb
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\Authorization.SingleService.genruntimeconfig.cache
+D:\Hostel\Hostel\Authorization.SingleService\obj\Debug\net7.0\ref\Authorization.SingleService.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\JWTCoding.dll
+D:\Hostel\Hostel\Authorization.SingleService\bin\Debug\net7.0\JWTCoding.pdb

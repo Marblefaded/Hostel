@@ -1,0 +1,48 @@
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.deps.json
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.AssemblyReference.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfoInputs.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfo.cs
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.CoreCompileInputs.cache
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\refint\Authorization.SingleService.Core.dll
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\vlad1\source\repos\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\ref\Authorization.SingleService.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.deps.json
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.AssemblyReference.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfoInputs.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfo.cs
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.CoreCompileInputs.cache
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\refint\Authorization.SingleService.Core.dll
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\OneDrive\Рабочий стол\Authorization.SingleService\Authorization.SingleService.Core\obj\Debug\net7.0\ref\Authorization.SingleService.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.deps.json
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.AssemblyReference.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfoInputs.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfo.cs
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.CoreCompileInputs.cache
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\refint\Authorization.SingleService.Core.dll
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.pdb
+C:\Users\sitni\source\repos\AuthenticHostel\Authorization.SingleService.Core\obj\Debug\net7.0\ref\Authorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.deps.json
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Authorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.AssemblyInfo.cs
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\refint\Authorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Authorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\ref\Authorization.SingleService.Core.dll

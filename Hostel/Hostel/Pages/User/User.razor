@@ -1,0 +1,114 @@
+﻿@page "/User"
+@inherits UserView
+@inject IDialogService DialogService
+
+<AuthorizeView Roles="Administrator,SysAdmin">
+    <Authorized>
+        <div class="сontainer">
+            <div class="d-flex justify-content-center">
+                <div class="col-16 col-md-auto">
+                    <div class="my-3 text-center">
+                        <h3>Проживающие</h3>
+                    </div>
+                    <div class="my-3 text-center">
+                        <MudStack Row="true">
+                            <input type="text" class="form-control-sm" placeholder="Поиск..." @bind-value="@FilterValue" @bind-value:event="oninput" />
+                            @* <MudTextField Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Outlined.Search" Variant="Variant.Outlined" @bind-Value="@FilterValue" Label="Поиск..." Text="@FilterValue" T="string" Immediate="true"></MudTextField> *@
+                            <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Material.Outlined.Add" Color="Color.Error" @onclick="AddItemDialog">Создать</MudButton>
+                        </MudStack>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+        @if (Model == null)
+        {
+            <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+                <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+            </MudGrid>
+        }
+        else
+        {
+            <MudTable Items="@Model" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+                <HeaderContent>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.Surname)">
+                            Фамилия
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.Name)">
+                            Имя
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.Secondname)">
+                            Отчество
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.PhoneNumber)">
+                            Номер телефона
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.UserDeportament)">
+                            Факультет
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.UserCourse)">
+                            Курс
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.UserViewModel, object>(x=>x.UserGroup)">
+                            Группа
+                        </MudTableSortLabel>
+                    </MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate Context="item">
+                    <MudTd DataLabel="Фамилия">@item.Surname</MudTd>
+                    <MudTd DataLabel="Имя">@item.Name</MudTd>
+                    <MudTd DataLabel="Отчество">@item.Secondname</MudTd>
+                    <MudTd DataLabel="Номер телефона">@item.PhoneNumber</MudTd>
+                    <MudTd DataLabel="Факультет">
+                        @item.UserDeportament
+                        <MudIconButton @onclick="(() => FilterFacultet(item))" Icon="@Icons.Material.Filled.Search"></MudIconButton>
+                    </MudTd>
+                    <MudTd DataLabel="Курс">
+                        @item.UserCourse
+                        <MudIconButton @onclick="(() => FilterСourse(item))" Icon="@Icons.Material.Filled.Search"></MudIconButton>
+                    </MudTd>
+                    <MudTd DataLabel="Группа">
+                        @item.UserGroup
+                        <MudIconButton @onclick="(() => FilterGroup(item))" Icon="@Icons.Material.Filled.Search"></MudIconButton>
+                    </MudTd>
+                    <MudTd>
+                        <MudTooltip Text="Редактировать">
+                            <MudIconButton Icon="@Icons.Material.Outlined.Edit" Color="Color.Default" @onclick="(() => EditItemDialog(item))"></MudIconButton>
+                        </MudTooltip>
+                        <MudTooltip Text="Удалить">
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                        </MudTooltip>
+                    </MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+                </PagerContent>
+            </MudTable>
+        }
+    </Authorized>
+    <NotAuthorized>
+         <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+}

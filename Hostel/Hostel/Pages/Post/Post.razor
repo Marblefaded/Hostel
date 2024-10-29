@@ -1,0 +1,93 @@
+﻿@page "/Post"
+@using Suo.Autorization.Pages
+@using Suo.Autorization.Pages.Post
+@using Newtonsoft.Json
+@inherits PostView
+
+<AuthorizeView Roles="Administrator,SysAdmin, Headman">
+    <Authorized>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-16 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Публикации</h3>
+                </div>
+                <div class="my-3 text-center">
+                        <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Material.Outlined.Add" Color="Color.Error" @onclick="CreateItemAsync">Создать</MudButton>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (Model == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@Model" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.PostViewModel, object>(x=>x.Title)">
+                        Заголовок
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.PostViewModel, object>(x=>x.Text)">
+                        Текст
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.PostViewModel, object>(x=>x.CreateDate)">
+                        Дата публикации
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.PostViewModel, object>(x=>x.ListImageJson)">
+                        Изображение
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate Context="item">
+
+                <MudTd DataLabel="Заголовок">@item.Title</MudTd>
+                <MudTd Style="width:20%;" DataLabel="Текст">@item.Text</MudTd>
+                <MudTd DataLabel="Дата публикации">@item.CreateDate.ToString("d")</MudTd>
+                <MudTd>
+                    @foreach (var el in item.ListImages)
+                    {
+                        string newLink = Path.Combine("Accets", el);
+                        <img src="@newLink" alt="el" style="height: 10%; width: 10%;">
+                    }
+                </MudTd>
+                <MudTd Style="width:10%">
+                    <MudTooltip Text="Редактировать">
+                        <MudIconButton Icon="@Icons.Material.Outlined.Edit" Color="Color.Default" @onclick="(() => EditItemAsync(item))"></MudIconButton>
+                    </MudTooltip>
+                    <MudTooltip Text="Удалить">
+                        <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                    </MudTooltip>
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+         <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+
+    List<string> strings = null;
+}

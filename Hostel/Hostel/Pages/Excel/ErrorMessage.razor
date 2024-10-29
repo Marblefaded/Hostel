@@ -1,0 +1,19 @@
+﻿<MatDialog @bind-IsOpen="ViewModel.DialogIsOpen" CanBeClosed="false">
+    <MatDialogTitle>
+        <span style="top: 20px;">Информация об ошибке</span>&nbsp;
+        <div class="btn-group" style="padding-left: 480px; top: -38px;">
+            <MudIconButton Icon="@Icons.Material.Outlined.Cancel" Variant="Variant.Outlined" Color="Color.Error" aria-label="delete" @onclick="@(e => ViewModel.DialogIsOpen = false)">
+            </MudIconButton>
+        </div>
+    </MatDialogTitle>
+    <MatDialogContent style="width: 100%; padding-top: 10px">
+        <div class="form-group row mb-1">
+            <h2>@ViewModel.ErrorMessage</h2>
+        </div>
+    </MatDialogContent>
+</MatDialog>
+
+@code
+{
+    [Parameter] public ErrorMessageView ViewModel { get; set; }
+}

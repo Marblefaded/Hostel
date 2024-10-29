@@ -1,0 +1,194 @@
+﻿@using Suo.Admin.Data.Services
+@inherits LayoutComponentBase
+
+@inject MudThemeProvider mudTheme
+
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="CustomTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout Style="overflow: hidden;">
+    <AuthorizeView Roles="Administrator, SysAdmin, Headman">
+        <div class="hideWhenPrint">
+            <MudAppBar Elevation="1">
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Edge="Edge.Start" OnClick="@ToggleDrawer" />
+                <MudSpacer />
+                <MudTooltip Text="Перейти на главную">
+                    <MudIconButton Href="./" Icon="@Icons.Material.Outlined.Home" Variant="Variant.Filled" Style="@($"color:{Colors.DeepOrange.Darken1}; left:50px;")" Size="Size.Medium" ButtonType="ButtonType.Submit" />
+                </MudTooltip>
+                <MudSpacer />
+                <AuthorizeView Context="sAdmin" Roles="SysAdmin">
+                    <MudAvatar Style="margin-right:10px;height:36px;" Rounded="true" Variant="Variant.Outlined">
+                        <MudText>S</MudText>
+                    </MudAvatar>
+                </AuthorizeView>
+                <AuthorizeView Context="Admin" Roles="Administrator">
+                    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+                        <ActivatorContent>
+                            <MudIconButton Style="margin-right:10px;height:36px;width:40px;" Variant="Variant.Outlined">
+                                <MudText>A</MudText>
+                            </MudIconButton>
+                        </ActivatorContent>
+                        <ChildContent>
+                            <MudMenuItem>Профиль</MudMenuItem>
+                            <MudMenuItem>Выйти</MudMenuItem>
+                        </ChildContent>
+                    </MudMenu>
+                    @* <MudAvatar Style="margin-right:10px;height:36px;" Variant="Variant.Outlined">
+                    <MudText>A</MudText>
+                    </MudAvatar> *@
+                </AuthorizeView>
+                <AuthorizeView Context="head" Roles="Headman">
+                    <MudMenu AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+                        <ActivatorContent>
+                            <MudIconButton Style="margin-right:10px;height:36px;width:40px;" Variant="Variant.Outlined">
+                                <MudText>H</MudText>
+                            </MudIconButton>
+                        </ActivatorContent>
+                        <ChildContent>
+                            <MudMenuItem>Profile</MudMenuItem>
+                            <MudMenuItem>Sign Out</MudMenuItem>
+                        </ChildContent>
+                    </MudMenu>
+                    @* <MudAvatar Style="margin-right:10px;height:36px;" Variant="Variant.Outlined">
+                    <MudText>A</MudText>
+                    </MudAvatar> *@
+                </AuthorizeView>
+                <MudButton Href="./" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>LogOut())" ButtonType="ButtonType.Submit">Logout</MudButton>
+            </MudAppBar>
+
+            <MudDrawer @bind-Open="@open" Elevation="1">
+                <MudDrawerHeader>
+                    <MudText title="Система Упрвления Общежитием №1" Typo="Typo.h6">СУО №1</MudText>
+                </MudDrawerHeader>
+                <MudNavMenu Color="Color.Error" Bordered="true">
+                    <AuthorizeView Context="all" Roles="SysAdmin, Administrator">
+                        <MudNavLink Icon="@Icons.Material.Outlined.Home" Href="./" Match="NavLinkMatch.All">Главная</MudNavLink>
+                        <MudNavLink Icon="@Icons.Material.Outlined.People" Href="./user" Match="NavLinkMatch.All">Проживающие</MudNavLink>
+                    </AuthorizeView>
+                    <MudNavGroup Icon="@Icons.Material.Outlined.CleaningServices" Title="Дежурства" @bind-Expanded=_isOpen>
+                        <AuthorizeView Context="Head" Roles="Headman, SysAdmin, Administrator">
+                            <MudNavLink Icon="@Icons.Material.Outlined.Book" Href="./Duty" Match="NavLinkMatch.All">Расписание дежурств</MudNavLink>
+                            <MudNavLink Icon="@Icons.Material.Outlined.Book" Href="./Duty2" Match="NavLinkMatch.All">Расписание дежурств (Advanced)</MudNavLink>
+                        </AuthorizeView>
+                        <AuthorizeView Context="all" Roles="SysAdmin, Administrator">
+                            <MudNavLink Icon="@Icons.Material.Outlined.MeetingRoom" Href="./UserRoom">Комнаты</MudNavLink>
+                        </AuthorizeView>
+                    </MudNavGroup>
+                    <MudNavGroup Icon="@Icons.Custom.FileFormats.FileExcel" Title="Данные" @bind-Expanded=_isOpenData>
+                        <AuthorizeView Context="Head" Roles="SysAdmin, Administrator">
+                            <MudNavLink Icon="@Icons.Material.Filled.SimCardDownload" Href="./Excel" Match="NavLinkMatch.All">Загрузка данных</MudNavLink>
+                            <MudNavLink Icon="@Icons.Material.Filled.ImportExport" Href="./ExportData" Match="NavLinkMatch.All">Экспорт данных</MudNavLink>
+                        </AuthorizeView>
+                    </MudNavGroup>
+                    <AuthorizeView Context="sys" Roles="SysAdmin">
+                        <MudNavGroup Icon="@Icons.Material.Outlined.FeaturedPlayList" Title="Логи" @bind-Expanded=_isOpenLogs>
+                            <MudNavLink Icon="@Icons.Material.Filled.FeaturedPlayList" Href="./LogApplication" Match="NavLinkMatch.All">Лист ошибок</MudNavLink>
+                            <MudNavLink Icon="@Icons.Material.Filled.FeaturedPlayList" Href="./MessageLog" Match="NavLinkMatch.All">Лист сообщений</MudNavLink>
+                        </MudNavGroup>
+                    </AuthorizeView>
+                    @* <MudNavLink Icon="@Icons.Material.Outlined.Login" Href="./LogMessageEntry" Match="NavLinkMatch.All">LogMessageEntry</MudNavLink> *@
+                    <AuthorizeView Context="Headman" Roles="Headman, SysAdmin, Administrator">
+                        <MudNavLink Icon="@Icons.Material.Outlined.PostAdd" Href="./Post" Match="NavLinkMatch.All">Публикации</MudNavLink>
+                    </AuthorizeView>
+                    <AuthorizeView Context="all" Roles="SysAdmin, Administrator">
+                        <MudNavGroup Icon="@Icons.Custom.FileFormats.FileDocument" Title="Заявления" @bind-Expanded=_isExpanded>
+                            <MudNavLink Icon="@Icons.Material.Outlined.Bookmarks" Href="./AllApplications">Все заявления</MudNavLink>
+                            <MudNavLink Icon="@Icons.Material.Outlined.Article" Href="./ApplicationTypes">Виды заявлений</MudNavLink>
+                        </MudNavGroup>
+                        <MudNavLink Icon="@Icons.Material.Filled.ManageAccounts" Href="./Headmans" Match="NavLinkMatch.All">Старосты</MudNavLink>
+                    </AuthorizeView>
+                </MudNavMenu>
+                <MudNavLink Icon="@Icons.Material.Filled.Boy" Match="NavLinkMatch.All" Href="./About">Об авторах</MudNavLink>
+                <MudIconButton class="position-absolute bottom-0 start-0" Href="./Features" Icon="@Icons.Material.Outlined.Info">Features</MudIconButton>
+                <MudToggleIconButton class="position-absolute bottom-0 end-0" Icon="@Icons.Material.Outlined.Bedtime" Color="@Color.Error" ToggledIcon="@Icons.Material.Outlined.WbSunny" ToggledColor="Color.Default" @bind-Toggled="@_isDarkMode">
+
+                </MudToggleIconButton>
+            </MudDrawer>
+        </div>
+    </AuthorizeView>
+    <div class="page">
+        <AuthorizeView>
+
+        </AuthorizeView>
+        <MudMainContent>
+            @Body
+        </MudMainContent>
+    </div>
+</MudLayout>
+
+@code
+{
+    [Inject] private IHttpAuthenticationService auth { get; set; }
+    [Inject] private AuthenticationStateProvider provider { get; set; }
+    [CascadingParameter]
+    private Task<AuthenticationState>? authenticationState { get; set; }
+
+    private bool _isDarkMode = true;
+
+    bool _drawerOpen = false;
+    bool open = false;
+    public bool _isExpanded = false;
+    public bool _isOpen = false;
+    public bool _isOpenData = false;
+    public bool _isOpenLogs = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        //if (firstRender)
+        {
+            if (firstRender)
+            {
+                StateHasChanged();
+            }
+
+        }
+        await base.OnAfterRenderAsync(firstRender);
+
+    }
+
+    public void LogOut()
+    {
+
+        ((HostelAuthenticationStateProvider)provider).MarkUserAsLoggedOut();
+
+    }
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    void ToggleDrawer()
+    {
+        open = !open;
+    }
+
+    MudTheme CustomTheme = new MudTheme()
+        {
+            Palette = new PaletteLight()
+            {
+                ActionDefault = Colors.Shades.Black,
+                DrawerText = Colors.Shades.Black,
+                TextPrimary = Colors.Shades.Black,
+                Primary = Colors.Shades.Black,
+                Secondary = Colors.Green.Accent4,
+                AppbarBackground = Colors.Grey.Lighten5,
+                Background = Colors.Grey.Lighten2,
+            },
+            PaletteDark = new PaletteDark()
+            {
+                ActionDefault = Colors.Grey.Lighten5,
+                DrawerText = Colors.Grey.Lighten5,
+                TextPrimary = Colors.Grey.Lighten5,
+                Surface = Colors.Grey.Darken3,
+                Error = Colors.Red.Darken1,
+                Primary = Colors.Shades.Black,
+                Secondary = Colors.Green.Accent4,
+                AppbarBackground = Colors.Grey.Darken3,
+                Background = Colors.Grey.Darken4,
+                DrawerBackground = Colors.Grey.Darken3,
+            },
+        };
+
+}

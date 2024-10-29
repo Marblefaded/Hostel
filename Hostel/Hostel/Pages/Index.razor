@@ -1,0 +1,299 @@
+﻿@page "/"
+
+@using Suo.Admin.Data.EditModel;
+@using Suo.Admin.Data.Service
+@using Suo.Admin.Data.Services
+@using Suo.Admin.Data.ViewModel;
+@attribute [Authorize(Roles = "Administrator, SysAdmin, Headman")]
+
+<AuthorizeView Roles="Administrator, SysAdmin">
+
+    <PageTitle>Index</PageTitle>
+
+    @* <div class="сontainer">
+    <div class="d-flex justify-content-center">
+    <div class="col-8 col-md-auto">
+    <div class="d-flex justify-content-between" style="margin-right:30px">
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./user" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Проживающие</MudButton>
+    </MudCardActions>
+    </MudCard>
+
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./AllApplications" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Все заявления</MudButton>
+    </MudCardActions>
+    </MudCard>
+
+
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./ApplicationTypes" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Виды заявлений</MudButton>
+    </MudCardActions>
+    </MudCard>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="сontainer">
+    <div class="d-flex justify-content-center">
+    <div class="col-8 col-md-auto">
+    <div class="d-flex justify-content-between" style="margin-right:30px">
+
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./Excel" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Загрузка данных</MudButton>
+    </MudCardActions>
+    </MudCard>
+
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./Post" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Публикации</MudButton>
+    </MudCardActions>
+    </MudCard>
+
+    <MudCard Class="card-main" Style="height: 130px; width: 20%;">
+    <MudCardActions Style="padding: 0px;">
+    <MudButton Class="btn-card" Href="./Duty" Variant="Variant.Filled" Style="@($"color:{Colors.Grey.Lighten5}; background:{Colors.Red.Darken4}; height:130px;")">Расписание дежурств</MudButton>
+    </MudCardActions>
+    </MudCard>
+    </div>
+    </div>
+    </div>
+    </div> *@
+    <MudGrid Justify="Justify.Center">
+        <MudItem xs="12">
+            <MudPaper Class="d-flex align-center justify-center py-8" Style="margin-left:17%; margin-top:2%; width:66%; font-weight: bold;">
+                <h1>@date.ToString("D")</h1>
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="8" sm="4">
+            <MudPaper Square="true" Class="d-flex justify-center py-16" Style="height: 500px">
+                <MudPaper Class="d-flex flex-column flex-grow-1 gap-4" Elevation="0">
+                    <MudText Style="font-weight: bold;" Align="Align.Center" Typo="Typo.h4">
+                        Сегодня дежурят
+                    </MudText>
+                    <MudCard Style="@($"background:{Colors.Red.Darken3}; margin: 5%")" Elevation="7">
+                        <MudCardContent>
+                            @foreach (var i in AllDaysList)
+                            {
+                                <dl>
+                                    <dt style="margin-left: 48%">
+                                        @i.RoomNumber
+                                    </dt>
+                                </dl>
+                            }
+                        </MudCardContent>
+                    </MudCard>
+                </MudPaper>
+
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="8" sm="4">
+            <MudPaper Square="true" Class="d-flex justify-center py-16" Style="height: 500px; overflow:auto;">
+                <MudPaper Class="d-flex flex-column flex-grow-1 gap-4" Elevation="0">
+                    <MudText Style="font-weight: bold;" Align="Align.Center" Typo="Typo.h4">
+                        Заявления за сегодня
+                    </MudText>
+                    @foreach(var i in AllClaimsList)
+                    {
+                        <MudCard Style="@($"background:{Colors.Red.Darken3}; margin: 5%")" Elevation="7">
+                            <MudCardContent>
+                                @if (AllClaimsList == null)
+                                {
+                                    <MudText>
+                                        Заявлений нет
+                                    </MudText>
+                                }
+                                else
+                                {
+                                        <dl>
+                                            <dt style="text-align:center;">
+                                                <h6 style="font-weight: bolder;">
+                                                @TemplateModel.FirstOrDefault(x=>x.ClaimTemplateId==i.ClaimTemplateId).Title
+                                                </h6>
+                                            </dt>
+
+                                            <dt style="text-align:center; padding-top: 3%">
+                                                @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Surname
+                                                &nbsp
+                                                @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Name
+                                                &nbsp
+                                                @if ((UserModel.FirstOrDefault(x => x.UserId == i.UserId).Secondname) != null)
+                                                {
+                                                    @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Secondname
+                                                }
+                                            </dt>
+                                        </dl>
+                                }
+                            </MudCardContent>
+                        </MudCard>
+                        
+                    }
+                </MudPaper>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+        @* <div class="col-9">
+            <div class="personal-dashboard" style="border: 1px solid; border-radius: 5px;">
+                <MudPaper Class="pa-16 ma-2" Elevation="3"> 
+                <div class="pd-header-container d-flex justify-content-center align-items-center">
+                    <h1>@date.ToString("d")</h1>
+                </div> 
+                </MudPaper>
+                <div class="pd-main-container d-flex justify-content-center align-items-center">
+                    <div class="pd-duty-container">
+                        <MudPaper Style="padding: 2%" Elevation="3">
+                            <MudText>
+                                Сегодня дежурит:
+                            </MudText>
+                            @foreach (var i in AllDaysList)
+                            {
+                                <dl>
+                                    <dt style="margin-left: 35%">
+                                        @i.RoomNumber;
+                                    </dt>
+                                </dl>
+                            }
+                        </MudPaper>
+                    </div>
+                    <div class="pd-application-container">
+                        <MudPaper Style="padding: 2%" Elevation="3">
+                            <MudText>
+                                Заявления за сегодня:
+                            </MudText>
+                            @if (AllClaimsList == null)
+                            {
+                                <MudText>
+                                    Заявлений нет
+                                </MudText>
+                            }
+                            else
+                            {
+                                @foreach (var i in AllClaimsList)
+                                {
+                                    <dl>
+                                        <dt style="margin-left: 35%">
+                                            @TemplateModel.FirstOrDefault(x=>x.ClaimTemplateId==i.ClaimTemplateId).Title
+                                            @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Surname
+                                            &nbsp
+                                            @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Name
+                                            &nbsp
+                                            @if ((UserModel.FirstOrDefault(x => x.UserId == i.UserId).Secondname) != null)
+                                            {
+                                                @UserModel.FirstOrDefault(x=>x.UserId==i.UserId).Secondname
+                                            }
+                                        </dt>
+                                    </dl>
+                                }
+                            }
+                        </MudPaper>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+</AuthorizeView>
+
+@code
+{
+    [CascadingParameter]
+    Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    [Parameter]
+    public string token { get; set; }
+
+    [Inject] private AuthenticationStateProvider provider { get; set; }
+    [Inject] private AppVersionService Service { get; set; }
+    [Inject] protected ISnackbar Snackbar { get; set; }
+    [Inject] protected DutyService DutyService { get; set; }
+    [Inject] protected ClaimService ClaimService { get; set; }
+    [Inject] protected UserService userService { get; set; }
+    [Inject] protected ClaimTemplateService templateService { get; set; }
+
+    public DateTime date { get; set; }
+    public List<DutyViewModel> AllDaysList = new List<DutyViewModel>();
+    public List<ClaimViewModel> AllClaimsList = new List<ClaimViewModel>();
+    public EditDutyPageViewModel EditViewModel = new EditDutyPageViewModel();
+    public EditClaimItemViewModel EditClaim = new EditClaimItemViewModel();
+    protected List<UserViewModel> UserModel { get; set; } = new();
+    protected List<ClaimTemplateViewModel> TemplateModel { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //FOR LOGIN!!!
+        EditViewModel.AllDutys = DutyService.Get();
+        EditClaim.Models = ClaimService.Get();
+        UserModel = userService.Get();
+        TemplateModel = templateService.Get();
+        date = DateTime.Now;
+        SelectDayDuty();
+        SelectDayApplication();
+        await ((HostelAuthenticationStateProvider)provider).StateChangedAsync();
+
+    }
+    // protected async override Task OnParametersSetAsync()
+    // {
+    //     var result = await Service.GetCurrentAppVersion();
+    //     Snackbar.Add($"Версия:{result}", Severity.Info);
+    //     await base.OnParametersSetAsync();
+    // }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var result = await Service.GetCurrentAppVersion();
+            Snackbar.Add($"Версия:{result}", Severity.Info, config =>
+            {
+                config.CloseAfterNavigation = true;
+                config.Icon = Icons.Outlined.Info;
+                config.IconColor = Color.Info;
+                config.BackgroundBlurred = true;
+            });
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+
+    public void SelectDayDuty()
+    {
+        AllDaysList = EditViewModel.AllDutys.Where(x => x.Date.ToShortDateString() == date.ToShortDateString()).ToList();
+    }
+    public void SelectDayApplication()
+    {
+        AllClaimsList = EditClaim.Models.Where(x => x.CreateDate.ToShortDateString() == date.ToShortDateString()).ToList();
+    }
+
+
+}
+
+<style>
+    .personal-dashboard {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 50px repeat(7, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 85vh;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    .pd-header-container {
+        grid-area: 1 / 3 / 3 / 7;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .pd-main-container {
+        grid-area: 2 / 1 / 9 / 7;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .col-9{
+        flex: 0 0 75%;
+    }
+
+</style>
+
+
+

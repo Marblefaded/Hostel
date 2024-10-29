@@ -1,0 +1,96 @@
+version: '3.4'
+
+services:
+  authorization.singleservice:
+    image: ${DOCKER_REGISTRY-}authorizationsingleservice
+    build:
+      context: .
+      dockerfile: Authorization.SingleService/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "7580:80"
+    networks:
+      back:
+        ipv4_address: 172.131.0.2
+      default:
+      # - "443"
+    restart: always
+  hostelmvc:
+    image: ${DOCKER_REGISTRY-}hostelmvc
+    build:
+      context: .
+      dockerfile: Suo.Client/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "7581:80"
+    networks:
+      back:
+        ipv4_address: 172.131.0.3
+      default:
+    volumes:
+      - imagesnews:/app/wwwroot/Accets
+    restart: always
+  hostel:
+    image: ${DOCKER_REGISTRY-}hostel
+    build:
+      context: .
+      dockerfile: Hostel/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "7582:80"
+    networks:
+      back:
+        ipv4_address: 172.131.0.4
+      default:
+    restart: always
+    volumes:
+      - imagesnews:/app/wwwroot/Accets
+  # hostel.database:
+  #   image: mcr.microsoft.com/mssql/server:2022-CU6-ubuntu-20.04
+  #   container_name: hostelmssql
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   networks:
+  #     default: 
+  #   environment:
+  #     - MSSQL_SA_PASSWORD=Wladgood1051!
+  #     - ACCEPT_EULA=Y
+  #   ports:
+  #     - 7133:1433
+  hostel.mysql:
+    build: ./mysql/
+    container_name: hostelmyql
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      default: 
+    environment:
+      MYSQL_ROOT_PASSWORD: k0IcfdmmGSygHDQ75H
+      MYSQL_DATABASE: hostel
+      MYSQL_USER: hostel
+      MYSQL_PASSWORD: Sx2p1Te6BtACEwQjwE
+    restart: always
+    # ports:
+      # - 8506:3306
+    networks:
+      back:
+        ipv4_address: 172.131.0.7
+      default:
+volumes:
+  imagesnews:
+networks:
+  back:
+    driver: bridge
+    internal: true
+    ipam:
+     driver: default
+     config:
+       - subnet: 172.131.0.0/24
+  default:
+    driver: bridge

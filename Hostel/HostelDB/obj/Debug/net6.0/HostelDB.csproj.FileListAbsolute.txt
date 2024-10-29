@@ -1,0 +1,15 @@
+D:\Hostel\Hostel\HostelDB\bin\Debug\net6.0\HostelDB.deps.json
+D:\Hostel\Hostel\HostelDB\bin\Debug\net6.0\HostelDB.dll
+D:\Hostel\Hostel\HostelDB\bin\Debug\net6.0\HostelDB.pdb
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.AssemblyInfo.cs
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.dll
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\refint\HostelDB.dll
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.pdb
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\ref\HostelDB.dll
+D:\Hostel\Hostel\HostelDB\bin\Debug\net6.0\HostelDB.runtimeconfig.json
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.genruntimeconfig.cache
+D:\Hostel\Hostel\HostelDB\obj\Debug\net6.0\HostelDB.sourcelink.json

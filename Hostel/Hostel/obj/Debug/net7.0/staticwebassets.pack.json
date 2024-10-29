@@ -1,0 +1,293 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Suo.Admin.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Suo.Admin.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\FlexSupers.jpg",
+      "PackagePath": "staticwebassets\\FlexSupers.jpg"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\Kjs.jpg",
+      "PackagePath": "staticwebassets\\Kjs.jpg"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\Stukow.jpg",
+      "PackagePath": "staticwebassets\\Stukow.jpg"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\Stukoww.jpg",
+      "PackagePath": "staticwebassets\\Stukoww.jpg"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\js\\html2pdf.js",
+      "PackagePath": "staticwebassets\\js\\html2pdf.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\js\\printscript.js",
+      "PackagePath": "staticwebassets\\js\\printscript.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\js\\save.js",
+      "PackagePath": "staticwebassets\\js\\save.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\bibi.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\bibi.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\bootstrap5\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap5\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\dist\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\dist\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\dist\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\dist\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\lib\\jquery\\dist\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\js\\jquery.js"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\marblefade.jpg",
+      "PackagePath": "staticwebassets\\marblefade.jpg"
+    },
+    {
+      "Id": "D:\\Hostel\\Hostel\\Hostel\\wwwroot\\vann.jpeg",
+      "PackagePath": "staticwebassets\\vann.jpeg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Suo.Admin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Suo.Admin.props",
+      "PackagePath": "build\\Suo.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Suo.Admin.props",
+      "PackagePath": "buildMultiTargeting\\Suo.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Suo.Admin.props",
+      "PackagePath": "buildTransitive\\Suo.Admin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,16 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Suo.Admin
+@namespace Hostel.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<component type="typeof(App)" render-mode="ServerPrerendered" />
+
+<script src="~/js/save.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="lib/jquery/dist/css/jquery-ui.min.css" />
+
+<script src="~/js/script.js"></script>

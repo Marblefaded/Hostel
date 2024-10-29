@@ -1,0 +1,12 @@
+﻿@inherits LogApplicationStackTraceView
+
+<MudDialog>
+    <DialogContent>
+        <div style="border-bottom: 1px solid grey; padding-bottom: 15px;margin-top:-24px;" class="d-flex justify-content-between">
+            <MudText Typo="Typo.h6">
+                @Title
+            </MudText>
+        </div>
+        <text style="background-color:#424242; color: white;" class="form-control border-0">@LogViewModel.ErrorContext</text>
+    </DialogContent>
+</MudDialog>

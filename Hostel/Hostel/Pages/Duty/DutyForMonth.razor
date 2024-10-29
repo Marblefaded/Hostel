@@ -1,0 +1,284 @@
+﻿@inherits DutyForMonthUi
+<div style="color:black">
+<div class="showWhenPrint">
+    <table class="tableCalendar">
+            @if (AllDaysList != null)
+            {
+                <tr>
+            <td colspan="5"><div class="floor">Третий этаж</div></td>
+            <td colspan="2"><div style="text-align:end; font-size:xx-large" class="floor">@EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")) @EditViewModel.Date.ToString("yyyy")</div></td>
+        </tr>
+         <tr class="weekName" style="text-align:center; font-size:large">
+             <td>Понедельник</td>
+             <td>Вторник</td>
+             <td>Среда</td>
+             <td>Четверг</td>
+             <td>Пятница</td>
+             <td>Суббота</td>
+             <td>Воскресенье</td>
+              </tr>
+            }            
+        @for (var i = 0; i < AllDaysList.Count; i++)
+        {            
+            if (i % 7 == 0)
+            {
+                @:<tr>
+            }
+            var item = AllDaysList[i];
+            if (item == null)
+            {
+                <th class="day-number greycell">
+                    <span class="weekName"> </span>
+                </th>
+            }
+            else
+            {
+                <th class="day-number">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="dutys" style="font-size:large">
+                        @item?.ToString("dd" , System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))
+
+                            </span>                            
+                        </div>                      
+                    </div>
+                    <span class="numOfDay" style="text-align:center; font-size:x-large;margin-bottom:30px">
+                                @SelectDutyFor3floor(item, 3).RoomNumber
+
+                        </span>                    
+                </th>
+            }
+            if ((i + 1) % 7 == 0)
+            {
+                @:</tr>
+            }
+        }
+    </table>
+</div>
+
+<div class="showWhenPrint">
+    <table class="tableCalendar">
+            @if (AllDaysList != null)
+            {
+                <tr>
+            <td colspan="5"><div class="floor">Четвертый этаж, левое крыло</div></td>
+            <td colspan="2"><div style="text-align:end; font-size:xx-large" class="floor">@EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")) @EditViewModel.Date.ToString("yyyy")</div></td>
+        </tr>
+         <tr class="weekName" style="text-align:center; font-size:large">
+             <td>Понедельник</td>
+             <td>Вторник</td>
+             <td>Среда</td>
+             <td>Четверг</td>
+             <td>Пятница</td>
+             <td>Суббота</td>
+             <td>Воскресенье</td>
+              </tr>
+            }            
+        @for (var i = 0; i < AllDaysList.Count; i++)
+        {            
+            if (i % 7 == 0)
+            {
+                @:<tr>
+            }
+            var item = AllDaysList[i];
+            if (item == null)
+            {
+                <th class="day-number greycell">
+                    <span class="weekName"> </span>
+                </th>
+            }
+            else
+            {
+                <th class="day-number">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="dutys" style="font-size:large">
+                        @item?.ToString("dd" , System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))
+
+                            </span>                            
+                        </div>                      
+                    </div>
+                    <span class="numOfDay" style="text-align:center; font-size:x-large;margin-bottom:30px">
+                                                               @SelectDuty(item, 4, "l").RoomNumber
+
+
+                        </span>                    
+                </th>
+            }
+            if ((i + 1) % 7 == 0)
+            {
+                @:</tr>
+            }
+        }
+    </table>
+</div>
+<div class="showWhenPrint">
+    <table class="tableCalendar">
+            @if (AllDaysList != null)
+            {
+                <tr>
+            <td colspan="5"><div class="floor">Четвертый этаж, правое крыло</div></td>
+            <td colspan="2"><div style="text-align:end; font-size:xx-large" class="floor">@EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")) @EditViewModel.Date.ToString("yyyy")</div></td>
+        </tr>
+         <tr class="weekName" style="text-align:center; font-size:large">
+             <td>Понедельник</td>
+             <td>Вторник</td>
+             <td>Среда</td>
+             <td>Четверг</td>
+             <td>Пятница</td>
+             <td>Суббота</td>
+             <td>Воскресенье</td>
+              </tr>
+            }            
+        @for (var i = 0; i < AllDaysList.Count; i++)
+        {            
+            if (i % 7 == 0)
+            {
+                @:<tr>
+            }
+            var item = AllDaysList[i];
+            if (item == null)
+            {
+                <th class="day-number greycell">
+                    <span class="weekName"> </span>
+                </th>
+            }
+            else
+            {
+                <th class="day-number">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="dutys" style="font-size:large">
+                        @item?.ToString("dd" , System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))
+
+                            </span>                            
+                        </div>                      
+                    </div>
+                    <span class="numOfDay" style="text-align:center; font-size:x-large;margin-bottom:30px">
+   @SelectDuty(item, 4, "r").RoomNumber
+                   </span>                    
+                </th>
+            }
+            if ((i + 1) % 7 == 0)
+            {
+                @:</tr>
+            }
+        }
+    </table>
+</div>
+
+<div class="showWhenPrint">
+    <table class="tableCalendar">
+            @if (AllDaysList != null)
+            {
+                <tr>
+            <td colspan="5"><div class="floor">Пятый этаж, левое крыло</div></td>
+            <td colspan="2"><div style="text-align:end; font-size:xx-large" class="floor">@EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")) @EditViewModel.Date.ToString("yyyy")</div></td>
+        </tr>
+         <tr class="weekName" style="text-align:center; font-size:large">
+             <td>Понедельник</td>
+             <td>Вторник</td>
+             <td>Среда</td>
+             <td>Четверг</td>
+             <td>Пятница</td>
+             <td>Суббота</td>
+             <td>Воскресенье</td>
+              </tr>
+            }            
+        @for (var i = 0; i < AllDaysList.Count; i++)
+        {            
+            if (i % 7 == 0)
+            {
+                @:<tr>
+            }
+            var item = AllDaysList[i];
+            if (item == null)
+            {
+                <th class="day-number greycell">
+                    <span class="weekName"> </span>
+                </th>
+            }
+            else
+            {
+                <th class="day-number">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="dutys" style="font-size:large">
+                        @item?.ToString("dd" , System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))
+
+                            </span>                            
+                        </div>                      
+                    </div>
+                    <span class="numOfDay" style="text-align:center; font-size:x-large;margin-bottom:30px">
+                                                               @SelectDuty(item, 5, "l").RoomNumber
+
+
+                        </span>                    
+                </th>
+            }
+            if ((i + 1) % 7 == 0)
+            {
+                @:</tr>
+            }
+        }
+    </table>
+</div>
+<div class="showWhenPrint">
+    <table class="tableCalendar">
+            @if (AllDaysList != null)
+            {
+                <tr>
+            <td colspan="5"><div class="floor">Пятый этаж, правое крыло</div></td>
+            <td colspan="2"><div style="text-align:end; font-size:xx-large" class="floor">@EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")) @EditViewModel.Date.ToString("yyyy")</div></td>
+        </tr>
+         <tr class="weekName" style="text-align:center; font-size:large">
+             <td>Понедельник</td>
+             <td>Вторник</td>
+             <td>Среда</td>
+             <td>Четверг</td>
+             <td>Пятница</td>
+             <td>Суббота</td>
+             <td>Воскресенье</td>
+              </tr>
+            }            
+        @for (var i = 0; i < AllDaysList.Count; i++)
+        {            
+            if (i % 7 == 0)
+            {
+                @:<tr>
+            }
+            var item = AllDaysList[i];
+            if (item == null)
+            {
+                <th class="day-number greycell">
+                    <span class="weekName"> </span>
+                </th>
+            }
+            else
+            {
+                <th class="day-number">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="dutys" style="font-size:large">
+                        @item?.ToString("dd" , System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))
+
+                            </span>                            
+                        </div>                      
+                    </div>
+                    <span class="numOfDay" style="text-align:center; font-size:x-large;margin-bottom:30px">
+   @SelectDuty(item, 5, "r").RoomNumber
+                   </span>                    
+                </th>
+            }
+            if ((i + 1) % 7 == 0)
+            {
+                @:</tr>
+            }
+        }
+    </table>
+</div>
+
+</div>
+
+
+

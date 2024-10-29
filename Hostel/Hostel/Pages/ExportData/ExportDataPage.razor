@@ -1,0 +1,197 @@
+﻿@page "/ExportData"
+@inherits ExportDataView
+
+<AuthorizeView Roles="Administrator,SysAdmin">
+    <Authorized>
+    @* <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-4 col-md-auto">
+                <br />
+                <h3 style="margin-left:60px">Data export</h3>
+                <br />
+            </div>
+        </div>
+    </div> *@
+    @* <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <MudCheckBox @bind-Checked="@_choiceModel.Room" Color="Color.Default">Номер комнаты</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserName" Color="Color.Default">Имя</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserLastName" Color="Color.Default">Фамилия</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserPatronymic" Color="Color.Default">Отчество</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserPhoneNumber" Color="Color.Default">Номер телефона</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserGroup" Color="Color.Default">Группа</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserCourse" Color="Color.Default">Курс</MudCheckBox>
+            <MudCheckBox @bind-Checked="@_choiceModel.UserDeportament" Color="Color.Default">Факультет</MudCheckBox>
+        </div>
+    </div> *@
+    @* <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <MudButton StartIcon="@Icons.Material.Outlined.FileDownload" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>SortAndDownload())">
+                Скачать
+            </MudButton>
+        </div>
+    </div> *@
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-16 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Экспорт данных</h3>
+                </div>
+                <div class="my-3 text-center">
+                    <MudButton StartIcon="@Icons.Material.Outlined.FileDownload" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>SortAndDownload())">
+                        Скачать
+                    </MudButton>
+                </div>
+                    <div class="my-3 text-center d-block d-sm-none">
+                    <MudCheckBox @bind-Checked="@_choiceModel.Room" Color="Color.Default">Номер комнаты</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserName" Color="Color.Default">Имя</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserLastName" Color="Color.Default">Фамилия</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserPatronymic" Color="Color.Default">Отчество</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserPhoneNumber" Color="Color.Default">Номер телефона</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserGroup" Color="Color.Default">Группа</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserCourse" Color="Color.Default">Курс</MudCheckBox>
+                    <MudCheckBox @bind-Checked="@_choiceModel.UserDeportament" Color="Color.Default">Факультет</MudCheckBox>
+                </div>
+                    <div class="сontainer d-none d-sm-block">
+                        <div class="d-flex justify-content-center">
+                            <MudCheckBox @bind-Checked="@_choiceModel.Room" Color="Color.Default">Номер комнаты</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserName" Color="Color.Default">Имя</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserLastName" Color="Color.Default">Фамилия</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserPatronymic" Color="Color.Default">Отчество</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserPhoneNumber" Color="Color.Default">Номер телефона</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserGroup" Color="Color.Default">Группа</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserCourse" Color="Color.Default">Курс</MudCheckBox>
+                            <MudCheckBox @bind-Checked="@_choiceModel.UserDeportament" Color="Color.Default">Факультет</MudCheckBox>
+                        </div>
+                    </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (ExportDataViewModels == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@ExportDataViewModels" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                @if (_choiceModel.Room)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.Room)">
+                            Комната
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserLastName)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserLastName)">
+                            Фамилия
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserName)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserName)">
+                            Имя
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserPatronymic)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserPatronymic)">
+                            Отчество
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserPhoneNumber)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserPhoneNumber)">
+                            Номер телефона
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserDeportament)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserDeportament)">
+                            Факультет
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserCourse)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserCourse)">
+                            Курс
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+                @if (_choiceModel.UserGroup)
+                {
+                    <MudTh>
+                        <MudTableSortLabel SortBy="new Func<Data.ViewModel.ExportDataViewModel, object>(x=>x.UserGroup)">
+                            Группа
+                        </MudTableSortLabel>
+                    </MudTh>
+                }
+            </HeaderContent>
+            <RowTemplate Context="item">
+                @if (_choiceModel.Room)
+                {
+                    <MudTd DataLabel="Комната">@item.Room</MudTd>
+                }
+                @if (_choiceModel.UserLastName)
+                {
+                    <MudTd DataLabel="Фамилия">@item.UserLastName</MudTd>
+                }
+                @if (_choiceModel.UserName)
+                {
+                    <MudTd DataLabel="Имя">@item.UserName</MudTd>
+                }
+                @if (_choiceModel.UserPatronymic)
+                {
+                    <MudTd DataLabel="Отчество">@item.UserPatronymic</MudTd>
+                }
+                @if (_choiceModel.UserPhoneNumber)
+                {
+                    <MudTd DataLabel="Номер телефона">@item.UserPhoneNumber</MudTd>
+                }
+                @if (_choiceModel.UserDeportament)
+                {
+                    <MudTd DataLabel="Факультет">@item.UserDeportament</MudTd>
+                }
+                @if (_choiceModel.UserCourse)
+                {
+                    <MudTd DataLabel="Курс">@item.UserCourse</MudTd>
+                }
+                @if (_choiceModel.UserGroup)
+                {
+                    <MudTd DataLabel="Группа">@item.UserGroup</MudTd>
+                }
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+}

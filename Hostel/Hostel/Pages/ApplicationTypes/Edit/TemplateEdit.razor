@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits TemplateEditView
+
+<EditForm Model="@ViewModel.Item" OnValidSubmit="SaveTask">
+    <DataAnnotationsValidator />
+    <MudDialog Style="width: 30%">
+        <TitleContent>
+          @*   <EditForm Model="@ViewModel" Context="item" OnValidSubmit="SaveTask"> *@
+                <div style="border-bottom: 1px solid grey; padding-bottom: 15px;" class="d-flex justify-content-between">
+                    <MudText Typo="Typo.h6">
+                        Изменение вида заявления
+                    </MudText>
+                </div>
+            @* </EditForm> *@
+        </TitleContent>
+        <DialogContent>
+
+            <MudTextField Label="Название вида заявления" Immediate="true"
+            @bind-Value="ViewModel.Item.Title" For="@(() => ViewModel.Item.Title)" />   
+            @* <MudTextField Label="Должность принимающего" Immediate="true"
+            @bind-Value="ViewModel.report.RankOfManagement" For="@(() => ViewModel.report.RankOfManagement)" />
+            <MudTextField Label="ФИО принимающего" Immediate="true"
+            @bind-Value="ViewModel.report.NameOfManager" For="@(() => ViewModel.report.NameOfManager)" /> *@
+            <MudTextField Label="Текстформа заявления" Variant="Variant.Text" style="width: 100%" Lines="6" Class="mt-3"
+            @bind-Value="ViewModel.report.Text" For="@(() => ViewModel.report.Text)" />
+            <div class="col-6" style="height: 100%;">
+                @if (!string.IsNullOrEmpty(Data))
+                {
+                    <object id="pdfBox" data="data:application/pdf;base64,@Data" type="application/pdf" class="pdfLarge" style="min-height: 600px;min-width: 500px;text-align: center;"></object>
+                }
+            </div>
+            <div style="border-bottom: 1px solid grey; padding-bottom: 15px;" class="d-flex justify-content-between">
+                <MudButton Style="margin-right: 5%;margin-top: 3%;" Variant="Variant.Filled" Color="Color.Success" @onclick="Find">Предварительный просмотр</MudButton>
+                @if (!string.IsNullOrEmpty(ViewModel.Item.Title) && !string.IsNullOrEmpty(ViewModel.report.RankOfManagement)
+                && !string.IsNullOrEmpty(ViewModel.report.NameOfManager) && !string.IsNullOrEmpty(ViewModel.report.Text))
+                {
+                    <MudButton Style="margin-top: 3%;" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success">Сохранить</MudButton>
+                }
+                else
+                {
+                    <MudButton Style="margin-top: 3%;" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Disabled="true">Заполните все поля</MudButton>
+                }
+            </div>
+        </DialogContent>
+        <DialogActions>
+        </DialogActions>
+    </MudDialog>
+</EditForm>

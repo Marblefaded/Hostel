@@ -1,0 +1,61 @@
+﻿@using Suo.Client.Models.Responce;
+@{
+    Layout = null;
+}
+@model ErrorConfirm
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] СибГУТИ Общежитие №1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="container h-100">
+        <form asp-action="Reset" method="post" class="h-100">
+            <div class="form-horizontal">
+                <h3 class="number">
+                    Введите данные по которым мы можем найти ваш аккаунт.
+                </h3>
+                <div class="form-group" style="max-width: 420px; margin-bottom: 15px">
+                    <input name="phonenumber" type="text" class="form-control" placeholder="Номер телефона">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="form-group">
+                    <input name="redirectUri" type="text" value="@ViewBag.RedirectUri" hidden />
+                    <button class="login-btn">Восстановить</button>
+                </div>
+                <div class="form-group">
+                    <h5 style="color:red">
+                        @{
+                            if (Model != null)
+                            {
+                                @Model.Message
+                            }
+                        }
+                    </h5>
+                </div>
+            </div>
+        </form>
+        <br />
+        <div class="col-md-offset-3 lg-6">
+            <div class="form-horizontal">
+                <div class="w-100 mx-auto">
+                    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                        <div class="form-group m-0">
+                            <img src="~/qrcode.jpg" width="190" height="190">
+                        </div>
+                        <div class="form-group">
+                            <a href="@Model.TelegramLink">
+                                Регистрация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

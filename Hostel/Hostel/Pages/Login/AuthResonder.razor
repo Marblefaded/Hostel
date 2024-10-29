@@ -1,0 +1,149 @@
+﻿@using Suo.Admin.Data.Models.Request
+@using Suo.Admin.Data.Services
+@inherits AuthResponderViewModel
+
+@* <div class="container bgcont">
+    <div class="d-flex justify-content-center">
+        <div class="col-md-offset-3 lg-6 d-none d-sm-block">
+            <div class="form-horizontal">
+                <h3>Авторизация СУО №1</h3>
+                <br />
+                <div class="form-group">
+                    <input @bind="Login" @onkeyup="@Enter" placeholder="Email" class="form-control" type="email" />
+                </div>
+                <div class="form-group">
+                    <input @bind="Password" @onkeyup="@Enter" placeholder="Пароль" type="password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <MudFab Size="Size.Medium" Color="Color.Error" @onclick="LoginAuth" @onkeypress="@Enter" Label="Login" ButtonType="ButtonType.Submit" />
+                </div>
+                <div class="form-group">
+                    <h5 style="color:red">
+                        @Error
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-offset-3 d-block d-sm-none" style="margin-top:60%;">
+            <div class="form-horizontal">
+                <h3>Авторизация СУО №1</h3>
+                <br />
+                <div class="my-3 text-center">
+                    <MudTextField Style="max-width:900px; width:350px;" @bind-Value="Login" @onkeypress="Enter" Label="Логин" Variant="Variant.Filled" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.People" />
+
+                </div>
+                <div class="my-3 text-center">
+                    <MudTextField @bind-Value="Password" @onkeypress="Enter" Label="Пароль" Variant="Variant.Filled" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick" AdornmentAriaLabel="Show Password" />
+                </div>
+                <div class="form-group">
+                    <MudFab Size="Size.Medium" Color="Color.Error" @onclick="LoginAuth" @onkeypress="@Enter" Label="Login" ButtonType="ButtonType.Submit" />
+                </div>
+                <div class="form-group text-white">
+                    <h5 style="color:red">
+                        @Error
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+<div class="container bgcont">
+    <div class="col-md-offset-3 lg-6 d-none d-sm-block">
+        <div class="form-horizontal">
+            <h3 style="color: white">Авторизация СУО №1</h3>
+            <br />
+            <div class="form-group">
+                <input @bind="Login" @onkeyup="@Enter" placeholder="Email" class="form-control" type="email" />
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input @bind="Password" @onkeyup="@Enter" placeholder="Пароль" type="password" class="form-control" />
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="form-group">
+                <MudFab Size="Size.Medium" Color="Color.Error" @onclick="LoginAuth" @onkeypress="@Enter" Label="Login" ButtonType="ButtonType.Submit" />
+            </div>
+            <div class="form-group">
+                <h5 style="color:red">
+                    @Error
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-offset-3 d-block d-sm-none" style="margin-top:60%;">
+        <div class="form-horizontal">
+            <h3>Авторизация СУО №1</h3>
+            <br />
+            <div class="my-3 text-center form-group">
+                <input @bind="Login" @onkeyup="@Enter" placeholder="Email" class="form-control-mobile" type="email" />
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="my-3 text-center form-group">
+                <input @bind="Password" @onkeyup="@Enter" placeholder="Пароль" type="password" class="form-control-mobile" />
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="form-group">
+                <MudFab Size="Size.Medium" Color="Color.Error" @onclick="LoginAuth" @onkeypress="@Enter" Label="Login" ButtonType="ButtonType.Submit" />
+            </div>
+            <div class="form-group">
+                <h5 style="color:red">
+                    @Error
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code
+{
+    public string Login { get; set; }
+    public string Password { get; set; }
+    [Inject] private IHttpAuthenticationService auth { get; set; }
+
+    public string Error { get; set; }
+
+    private async Task LoginAuth()
+    {
+        var AuthResponse =
+            await auth.Login(new TokenRequest()
+                {
+                    Email = Login,
+                    Password = Password,
+                    UserDeviceUnfo = "Blazor Server"
+                });
+        if (!AuthResponse.IsSuccsesdTokenLogin)
+        {
+            Error = "Не правильный логин или пароль, повторите попытку входа";
+        }
+    }
+
+    private async Task Enter(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "numpadenter")
+        {
+            await LoginAuth();
+        }
+
+    }
+
+    bool isShow;
+    InputType PasswordInput = InputType.Password;
+    string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+    void ButtonTestclick()
+    {
+        @if (isShow)
+        {
+            isShow = false;
+            PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+            PasswordInput = InputType.Password;
+        }
+        else
+        {
+            isShow = true;
+            PasswordInputIcon = Icons.Material.Filled.Visibility;
+            PasswordInput = InputType.Text;
+        }
+    }
+}

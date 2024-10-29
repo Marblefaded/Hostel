@@ -1,0 +1,16 @@
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\bin\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.deps.json
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\bin\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.dll
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\bin\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.AssemblyInfo.cs
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.sourcelink.json
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Auto.D9AF2670.Up2Date
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.dll
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\refint\Suo.Autorization.SingleService.Infrastructure.dll
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\Suo.Autorization.SingleService.Infrastructure.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Infrastructure\obj\Debug\net7.0\ref\Suo.Autorization.SingleService.Infrastructure.dll

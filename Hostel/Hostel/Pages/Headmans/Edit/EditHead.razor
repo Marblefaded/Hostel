@@ -1,0 +1,44 @@
+﻿@inherits EditHeadView
+
+<EditForm Model="@UserAdd" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <MudDialog Style="width: 40%;">
+        <DialogContent>
+            <div style="border-bottom: 1px solid grey; padding-bottom: 15px;margin-top:-24px;" class="d-flex justify-content-between">
+                <MudText Typo="Typo.h6">
+                    @Title
+                </MudText>
+                <MudButton Style="margin-right: 5%;" @onclick="Save" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success">Сохранить</MudButton>
+            </div>
+            <MudTextField Label="Имя" HelperText="Max. 8 characters"
+            @bind-Value="UserAdd.FirstName" For="@(() => UserAdd.FirstName)" />
+            <MudTextField Label="Фамилия" HelperText="Max. 8 characters"
+            @bind-Value="UserAdd.LastName" For="@(() => UserAdd.LastName)" />
+            <MudTextField Label="Электронная почта" HelperText="Max. 8 characters"
+            @bind-Value="UserAdd.Email" For="@(() => UserAdd.Email)" />
+            <MudTextField Label="Пароль" Class="mt-3"
+            @bind-Value="UserAdd.Password" For="@(() => UserAdd.Password)" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.SettingsSuggest" OnAdornmentClick="(()=>GeneratePassword())" AdornmentAriaLabel="Show Password" />
+            <br />
+            
+            @* <br/>
+            <MudTooltip Text="Сгенерировать">
+                <MudButton Variant="Variant.Outlined" Color="Color.Success" aria-label="generate" @onclick="(()=>GeneratePassword())">Сгенерировать пароль</MudButton>
+            </MudTooltip> *@
+            @* <div class="mud-input-control mud-input-input-control mt-3">
+                <div class="mud-input-control-input-container">
+                    <div class="mud-input mud-input-text mud-input-underline">
+                        <InputText class="mud-input-slot mud-input-root mud-input-root-text" @bind-Value="UserViewModel.PhoneNumber" name="PhoneNumber" />
+                        <div class="mud-input-slot mud-input-root mud-input-root-text" tabindex="-1">
+                        </div>
+                    </div>
+                    <label class="mud-input-label mud-input-label-animated mud-input-label-text mud-input-label-inputcontrol" for="PhoneNumber">Номер телефона</label>
+                    <ValidationMessage For="@(() => UserViewModel.Item.PhoneNumber)" />
+
+                </div>
+            </div> *@
+        </DialogContent>
+        @* <DialogActions>
+            <MudButton Style="margin-right: 5%;" @onclick="Save" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success">Сохранить</MudButton>
+        </DialogActions> *@
+    </MudDialog>
+</EditForm>

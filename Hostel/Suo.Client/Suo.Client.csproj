@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>9aceb468-0dec-4070-89b4-e5a92a29cf69</UserSecretsId>
+        <RootNamespace>Suo.Client</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
+      <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.6.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GlobalSpecialWords\GlobalSpecialWords.csproj" />
+      <ProjectReference Include="..\HostelDB\HostelDB.csproj" />
+      <ProjectReference Include="..\JWTCoding\JWTCoding.csproj" />
+      <ProjectReference Include="..\NPOIPdfEngine\NPOIPdfEngine.csproj" />
+    </ItemGroup>
+
+</Project>

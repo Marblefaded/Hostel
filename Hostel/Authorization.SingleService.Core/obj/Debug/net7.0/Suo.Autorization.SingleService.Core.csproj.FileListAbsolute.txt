@@ -1,0 +1,15 @@
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.deps.json
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.AssemblyInfo.cs
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\refint\Suo.Autorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.pdb
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\ref\Suo.Autorization.SingleService.Core.dll
+D:\Hostel\Hostel\Authorization.SingleService.Core\bin\Debug\net7.0\Suo.Autorization.SingleService.Core.runtimeconfig.json
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.genruntimeconfig.cache
+D:\Hostel\Hostel\Authorization.SingleService.Core\obj\Debug\net7.0\Suo.Autorization.SingleService.Core.sourcelink.json

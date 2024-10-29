@@ -1,0 +1,203 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization
+@using System.Text.Json
+@using System.Text.RegularExpressions
+@model HomeItemViewModel
+@inject IConfiguration Configuration
+
+
+@* <div class="h-100 d-flex flex-column"> *@
+@*     <div style="flex: 1"> *@
+<div class="row index-block">
+    <div class="col-12 col-xl-7 info-block py-3">
+        <div class="row fierst-block">
+            <div class="col-6 hello-block">
+                <h1>Добро пожаловать,</h1>
+                <h1>@Model.User.Name!</h1>
+            </div>
+            <div class="col-6">
+                <div class="info-card card-duty d-flex flex-column w-100 h-100" style="background: linear-gradient(135deg, rgba(217,115,15,1) 0%, rgba(230,138,41,1) 56%, rgba(243,151,54,1) 77%, rgba(255,194,91,1) 100%);">
+                    <h4 class="text-center px-4 pb-0">Ближайшее дежурство</h4>
+                    <div class="flex-1 body" style="@(Model.DateDuty != null ? "" : "position: relative")">
+                        <div class="center-absolute d-flex flex-column align-items-center">
+                            @if (Model.DateDuty != null)
+                            {
+                                <h4 class="p-0 date-duty">@Model.DateDuty.Value.Day</h4>
+                                <p style="text-align: center; margin-top: -25px; font-size: 20px">@Regex.Replace(Model.DateDuty.Value.ToString("M"), @"[\d\s]", "")</p>
+                            }
+                            else
+                            {
+                                <img src="sad.png" alt="" />
+                                <p class="waring-text">дата неизвестна</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row second-block">
+            <h2>Заявления</h2>
+            <div class="list-claim">
+                @foreach (var item in Model.Claims)
+                {
+                    @if (DateTime.Now.ToUniversalTime().AddHours(7).Hour >= 23 || DateTime.Now.ToUniversalTime().AddHours(7).Hour < 6)
+                    {
+                        <div class="info-card w-100 h-100 d-flex flex-column hover-block" style="cursor:default; background: linear-gradient(135deg, rgba(99,99,99,1) 0%, rgba(99,99,99,1) 56%, rgba(99,99,99,1) 77%, rgba(99,99,99,1) 100%);"
+                             data-bs-toggle="modal" data-bs-target="#endOfAcceptingApplications" data--claim-type-id="@item.ClaimType" data--claim-template-id="@item.ClaimTemplateId" data--is-enable-timetogo="@Model.IsEnableTimeToGo[item.ClaimTemplateId]" data--is-enable-timetoend="@Model.IsEnableTimeToEnd[item.ClaimTemplateId]" data--is-enable-timetostart="@Model.IsEnableTimeToStart[item.ClaimTemplateId]" data--is-enable-reason="@Model.IsEnableReason[item.ClaimTemplateId]">
+                            <h4 class="text-center d-none d-xl-block">Отправить заявление</h4>
+                            <div class="flex-1 d-flex align-items-center justify-content-center position-absolute" style="top: 0; bottom: 0; left: 0; right: 0">
+                                <h2>@item.Title</h2>
+                            </div>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="info-card w-100 h-100 d-flex flex-column hover-block" style="background: linear-gradient(135deg, rgba(71,26,122,1) 0%, rgba(109,36,175,1) 56%, rgba(132,51,215,1) 77%, rgba(153,91,255,1) 100%);"
+                             data-bs-toggle="modal" data-bs-target="#exampleModal" data--claim-type-id="@item.ClaimType" data--claim-template-id="@item.ClaimTemplateId" data--is-enable-timetogo="@Model.IsEnableTimeToGo[item.ClaimTemplateId]" data--is-enable-timetoend="@Model.IsEnableTimeToEnd[item.ClaimTemplateId]" data--is-enable-timetostart="@Model.IsEnableTimeToStart[item.ClaimTemplateId]" data--is-enable-reason="@Model.IsEnableReason[item.ClaimTemplateId]" onclick="OpenWindow(event)">
+                            <h4 class="text-center d-none d-xl-block">Отправить заявление</h4>
+                            <div class="flex-1 d-flex align-items-center justify-content-center position-absolute" style="top: 0; bottom: 0; left: 0; right: 0">
+                                <h2>@item.Title</h2>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-xl-5 h-100 py-3 news-block">
+        <div class="info-card h-100 d-flex flex-column" style="background: linear-gradient(135deg, rgba(0,61,132,1) 0%, rgba(19,80,166,1) 56%, rgba(34,95,195,1) 77%, rgba(67,127,255,1) 100%);">
+            <h4 class="text-center">Новости</h4>
+            <div class="grid-news flex-1 d-flex flex-column px-2 pb-4 ">
+                @foreach (var item in Model.Posts)
+                {
+                    <div class="news-card flex-1 align-items-center">
+                        <div class="img-block">
+                            @if (!string.IsNullOrEmpty(item.ListImageJson))
+                            {
+                                List<string> listImg = JsonSerializer.Deserialize<List<string>>(item.ListImageJson);
+                                @if (@listImg[0].IndexOf(".pdf") > 0)
+                                {
+                                    <a href="@Configuration["AdminProjectUrl"]Accets/@listImg[0]" class="fit-img">
+                                        <img class="image" src="~/pdf.png" />
+                                        <div class="middle">
+                                            <img src="~/icondown.png" />
+                                        </div>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <div class="fit-img">
+                                        <img src="@Configuration["AdminProjectUrl"]Accets/@listImg[0]" alt="" />
+                                        @*<img src="Flexsupers.jpg" alt=""></img>*@
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <svg style="fill: white" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="image">
+                                    <path d="M19,2H5C3.3438721,2.0018311,2.0018311,3.3438721,2,5v9.0683594V19c0.0018311,1.6561279,1.3438721,2.9981689,3,3h14c0.182312-0.0002441,0.3621216-0.0219727,0.5395508-0.0549316c0.0661011-0.012085,0.1291504-0.0303345,0.1936646-0.0466919c0.1060181-0.0270996,0.210083-0.0586548,0.3125-0.097229c0.0744629-0.0278931,0.1471558-0.0571289,0.218689-0.0906372c0.0839844-0.0395508,0.1642456-0.0853882,0.2444458-0.1327515c0.0751953-0.0441895,0.1511841-0.0856323,0.2219849-0.1359863c0.0057983-0.0041504,0.0123901-0.006897,0.0181885-0.0111084c0.0074463-0.0053711,0.013855-0.0120239,0.0209961-0.0178223c0.0136719-0.0110474,0.0308228-0.0164795,0.043335-0.0289917c0.0066528-0.0066528,0.008728-0.015564,0.0148926-0.0224609C21.5355225,20.8126221,21.9989624,19.9642944,22,19v-2.9296875V5C21.9981689,3.3438721,20.6561279,2.0018311,19,2z M19.5749512,20.9053955C19.3883667,20.9631958,19.1954956,20.9998779,19,21H5c-1.1040039-0.0014038-1.9985962-0.8959961-2-2v-4.7246094l3.7626953-3.7626953c0.684021-0.6816406,1.7905884-0.6816406,2.4746094,0l3.4048462,3.404541c0.0018921,0.0019531,0.0023804,0.0045776,0.0043335,0.0065308l6.9689941,6.9689941C19.6020508,20.8971558,19.588501,20.9012451,19.5749512,20.9053955z M21,19c-0.0006714,0.5162964-0.2020264,0.9821777-0.5234375,1.3369751l-6.7684326-6.7678223l1.055542-1.055481c0.6912231-0.6621094,1.7814331-0.6621094,2.4726562,0L21,16.2773438V19z M21,14.8632812l-3.0566406-3.0566406c-1.0737305-1.0722656-2.8129883-1.0722656-3.8867188,0l-1.055542,1.055542L9.9443359,9.8056641c-1.0744629-1.0722656-2.814209-1.0722656-3.8886719,0L3,12.8613281V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h14c1.1040039,0.0014038,1.9985962,0.8959961,2,2V14.8632812z M13.5,6C12.6715698,6,12,6.6715698,12,7.5S12.6715698,9,13.5,9c0.828064-0.0009155,1.4990845-0.671936,1.5-1.5C15,6.6715698,14.3284302,6,13.5,6z M13.5,8C13.223877,8,13,7.776123,13,7.5S13.223877,7,13.5,7c0.2759399,0.0005493,0.4994507,0.2240601,0.5,0.5C14,7.776123,13.776123,8,13.5,8z"></path>
+                                </svg>
+                            }
+
+                        </div>
+                        <div class="body flex-1 d-flex flex-column p-2 pl-1">
+                            <h4 class="mb-2">@item.Title</h4>
+                            <div class="text flex-1">
+                                <p>@item.Text</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <a class="morenews" asp-area="" asp-controller="Post" asp-action="News">ещё</a>
+            </div>
+        </div>
+    </div>
+</div>
+@*     </div> *@
+@* </div> *@
+
+
+@*<div class="сontainer">
+    <div class="d-flex justify-content-center">
+        <div class="col-8 col-md-auto">
+            <div class="d-flex justify-content-between">
+                <div class="card text-center mb-4" style="width: 14rem; margin-left: 60px; background-color: #424242">
+                    <div class="card-body" style="color: white">
+                        <h5 class="card-title">История заявлений</h5>
+                        <p class="card-text">Здесь находиться история Ваших заявлений</p>
+                    </div>
+                    <a class="floating-button" asp-area="" asp-controller="History" asp-action="Index">Перейти</a>
+                </div>
+                <div class="card text-center mb-4" style="width: 14rem; margin-left: 60px; background-color: #424242">
+                    <div class="card-body" style="color: white">
+                        <h5 class="card-title">Создать заявление</h5>
+                        <p class="card-text">Здесь Вы можете создать заявление</p>
+                    </div>
+                    <a class="floating-button" asp-area="" asp-controller="History" asp-action="Index">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+<div class="modal fade" id="endOfAcceptingApplications" tabindex="-1" aria-labelledby="endOfAcceptingApplicationsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            @*<div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Заявление</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>*@
+            <div class="modal-body">
+                <h1 style="text-align:center;">Подача заявлений невозможна с 23:00 до 06:00</h1>
+            </div>
+            <div class="modal-footer">
+                <div style="display:block;text-align:center;" class="w-100">
+                    <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" aria-label="ОК">ОК</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .img-block {
+        position: relative;
+        width: 50%;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .img-block:hover .image {
+        opacity: 0.3;
+    }
+
+    .img-block:hover .middle {
+        opacity: 1;
+    }
+</style>
+

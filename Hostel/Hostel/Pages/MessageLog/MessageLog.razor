@@ -1,0 +1,99 @@
+﻿@page "/MessageLog"
+@inherits MessageLogViewe
+
+<AuthorizeView Roles="SysAdmin">
+    <Authorized>
+        @if (Pass == true)
+        {
+            <div class="сontainer">
+                <div class="d-flex justify-content-center">
+                    <div class="col-16 col-md-auto">
+                        <div class="my-3 text-center">
+                            <h3>Лист сообщений</h3>
+                        </div>
+                        <div class="my-3 text-center">
+                            <MudStack Row="true">
+                                <InputSelect @bind-Value="@FilterByDirection" class="form-select">
+                                    <option value="" disabled selected hidden>Тип</option>
+                                    <option value="to">to</option>
+                                    <option value="from">from</option>
+                                    <option value="">Все</option>
+                                </InputSelect>
+                                <input style="width:100%;" type="date" class="form-control-sm" placeholder="Поиск ..." @bind-value="@FilterByDate" @bind-value:event="oninput" />
+                                <input type="text" class="form-control-sm" placeholder="Поиск..." @bind-value="@FilterByText" @bind-value:event="oninput" />
+                            </MudStack>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            @if (TelegramMessageViewModels == null)
+            {
+                <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+                    <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+                </MudGrid>
+            }
+            else
+            {
+                <MudTable Items="@TelegramMessageViewModels" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+                    <HeaderContent>
+                        <MudTh>
+                            <MudTableSortLabel SortBy="new Func<Data.ViewModel.TelegramMessageViewModel, object>(x=>x.DateSend)">
+                                Дата
+                            </MudTableSortLabel>
+                        </MudTh>
+                        <MudTh>
+                            <MudTableSortLabel SortBy="new Func<Data.ViewModel.TelegramMessageViewModel, object>(x=>x.Direction)">
+                                Тип
+                            </MudTableSortLabel>
+                        </MudTh>
+                        <MudTh>
+                            <MudTableSortLabel SortBy="new Func<Data.ViewModel.TelegramMessageViewModel, object>(x=>x.User)">
+                                Пользователь
+                            </MudTableSortLabel>
+                        </MudTh>
+                        <MudTh>
+                            <MudTableSortLabel SortBy="new Func<Data.ViewModel.TelegramMessageViewModel, object>(x=>x.TextMesage)">
+                                Текст
+                            </MudTableSortLabel>
+                        </MudTh>
+                        <MudTh>
+                        </MudTh>
+                    </HeaderContent>
+                    <RowTemplate Context="item">
+                        <MudTd DataLabel="Дата">@item.DateSend</MudTd>
+                        <MudTd DataLabel="Дата">@item.Direction</MudTd>
+                        <MudTd DataLabel="Пользователь">@item.User</MudTd>
+                        <MudTd DataLabel="Версия">@item.TextMesage</MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+                    </PagerContent>
+                </MudTable>
+            }
+        }
+        else
+        {
+            <div class="d-flex justify-content-center" style="margin-top:150px">
+                <input style="margin-right:10px;" type="text" class="form-control-sm" placeholder="" @bind-value="@TryToEnter" @bind-value:event="oninput" />
+                <MudButton Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>CheckEnter())">
+                    Вход
+                </MudButton>
+            </div>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+
+    public Origin TransformOrigin { get; set; } = Origin.TopCenter;
+    public Origin AnchorOrigin { get; set; } = Origin.BottomCenter;
+}

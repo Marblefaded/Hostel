@@ -1,0 +1,17 @@
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\Suo.TelegramBot.deps.json
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\Suo.TelegramBot.dll
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\Suo.TelegramBot.pdb
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\HostelDB.dll
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\JWTCoding.dll
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\HostelDB.pdb
+D:\Hostel\Hostel\Hostel.TelegramBot\bin\Debug\net7.0\JWTCoding.pdb
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.AssemblyInfo.cs
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.csproj.CopyComplete
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.dll
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\refint\Suo.TelegramBot.dll
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\Suo.TelegramBot.pdb
+D:\Hostel\Hostel\Hostel.TelegramBot\obj\Debug\net7.0\ref\Suo.TelegramBot.dll

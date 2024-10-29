@@ -1,0 +1,50 @@
+﻿@inherits EditDutyOrderView
+
+<MudDialog Style="min-width:600px; text-align:center">
+    <TitleContent>
+        <div style="border-bottom: 1px solid grey; padding-bottom: 15px;" class="d-flex justify-content-between">
+            <MudText Typo="Typo.h6">
+                Порядок дежурств
+            </MudText>
+        </div>
+        <InputSelect @bind-Value="@FloorWing" class="form-select">
+            <option  value=3>3 этаж</option>
+            <option  value=4l>4 этаж слева</option>
+            <option  value=4r>4 этаж справа</option>
+            <option  value=5l>5 этаж слева</option>
+            <option  value=5r>5 этаж справа</option>
+        </InputSelect>
+        @*<MudButton OnClick="">Выбрать</MudButton>*@
+    </TitleContent>
+    <DialogContent>
+        <MudDropContainer T="DropItem" Items="@_dropzoneItems" @ref="_container" ItemsSelector="@((item,dropzone) => item.Selector == dropzone)" ItemDropped="ItemUpdated" Class="d-flex flex-wrap flex-grow-1" Style="justify-content: space-around;">
+            <ChildContent>
+                <div style="text-align:center;height:47rem;overflow:auto; display:flex;width:100%;align-items:center;flex-wrap:nowrap;flex-direction:column; justify-content:center;  ">
+                @for (int i = 1; i < 2; i++)
+                {
+                    var dropzone = i.ToString();
+                  @*   <MudPaper Class="ma-4 flex-grow-1"> *@
+                        <MudList Clickable="true" Class="d-flex flex-column mud-height-full">
+                     @*        <MudListSubheader>3 этаж</MudListSubheader> *@
+                            <MudDropZone T="DropItem" Identifier="@dropzone" Class="flex-grow-1" AllowReorder="true" />
+                        </MudList>
+                   @*  </MudPaper> *@
+                }
+                </div>
+            </ChildContent>
+            <ItemRenderer>
+                <MudListItem Text="@($"{context.RoomViewModel.NumberRoom} ({context.Order})")" />
+            </ItemRenderer>
+        </MudDropContainer>
+    </DialogContent>
+    <DialogActions>
+        
+        <MudButton OnClick="Cancel" Variant="Variant.Filled" Color="Color.Error" Raised="true" Style="margin-right: 62%;">
+            Отмена
+        </MudButton>
+        <MudButton OnClick="Save" Variant="Variant.Filled" Color="Color.Success" Raised="true" Style="">
+            Сохранить
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+

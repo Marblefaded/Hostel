@@ -1,0 +1,138 @@
+﻿@page "/AllApplications"
+@inherits AllApplicationsView
+
+<AuthorizeView Roles="Administrator,SysAdmin">
+    <Authorized>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-16 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Все заявления</h3>
+                </div>
+                <div class="my-3 text-center">
+                    <MudDatePicker Variant="Variant.Outlined" Label="" @bind-Date="FilteringDate" DisableToolbar="true" />
+                </div>
+                <div class="my-3 text-center">
+                    <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Custom.FileFormats.FilePdf" Color="Color.Error" @onclick="(() => CreateTaskPdf(mCurrentItem))">Собрать заявления за день</MudButton>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (Model == null)
+    {
+        <MudGrid Justify="Justify.Center" Style="align-items: center; margin-top:250px">
+            <MudProgressCircular Color="Color.Error" Size="Size.Large" Indeterminate="true" Style="position:absolute" />
+        </MudGrid>
+    }
+    else
+    {
+        <MudTable Items="@Model" SortLabel="Sort" FixedHeader="true" Height="600px" Style="width: 90%; margin-left: 5%">
+            <HeaderContent>
+                <MudTh>#</MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimViewModel, object>(x => x.ClaimTemplateId)">
+                        Тип заявления
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimViewModel, object>(x => x.UserId)">
+                        Отправитель
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimViewModel, object>(x => x.UserId)">
+                        Принять?
+                    </MudTableSortLabel>
+                </MudTh>
+
+                @*  <MudTh>
+            <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimViewModel, object>(x => x.ClaimJson)">
+            Описание
+            </MudTableSortLabel>
+            </MudTh> *@
+                <MudTh>
+                    <MudTableSortLabel SortBy="new Func<Data.ViewModel.ClaimViewModel, object>(x => x.CreateDate)">
+                        Дата создания
+                    </MudTableSortLabel>
+                </MudTh>
+                <MudTh>
+                </MudTh>
+            </HeaderContent>
+            <RowTemplate Context="item">
+                <MudTd DataLabel="#">@item.ClaimId</MudTd>
+                <MudTd DataLabel="Тип заявления">@TemplateModel.FirstOrDefault(x=>x.ClaimTemplateId==item.ClaimTemplateId).Title</MudTd>
+                <MudTd DataLabel="Отправитель">
+                    @UserModel.FirstOrDefault(x=>x.UserId==item.UserId).Surname
+                    &nbsp
+                    @UserModel.FirstOrDefault(x=>x.UserId==item.UserId).Name
+                    &nbsp
+                    @if ((UserModel.FirstOrDefault(x => x.UserId == item.UserId).Secondname) != null)
+                    {
+                        @UserModel.FirstOrDefault(x=>x.UserId==item.UserId).Secondname
+                    }
+                </MudTd>
+                <MudTd DataLabel="Принять?">
+                    @if (item.Status == 0)
+                    {
+                        <div class="" style="flex-wrap:nowrap;display:flex;">
+                            <div class="">
+                                <MudButton OnClick="(e => Change(item, true))" Variant="Variant.Filled" Color="Color.Success" Raised="true">
+                                    Принять
+                                </MudButton>
+                            </div>
+                            <div class="" style="margin-left:15px;">
+                                <MudButton OnClick="(e => Change(item, false))" Variant="Variant.Filled" Color="Color.Error" Raised="true" >
+                                    Отклонить
+                                </MudButton>
+                            </div>
+                        </div>
+                        @*<input type="checkbox" @onchange='()=> Change(item)' />*@
+                    }
+                    else
+                    {
+                        @if (item.Status == 1)
+                        {
+                            <MudButton Disabled="bordered" Variant="Variant.Filled" Color="Color.Success" Raised="true">
+                                Принято
+                            </MudButton>
+                        }
+                        else
+                        {
+                            <MudButton Disabled="bordered" Variant="Variant.Filled" Color="Color.Error" Raised="true">
+                                Отклонено
+                            </MudButton>
+                        }
+                    }
+                </MudTd>
+                <MudTd DataLabel="Дата создания">@item.CreateDate.ToString("t")</MudTd>
+                <MudTd>
+                    <MudTooltip Text="Просмотр">
+                        <MudIconButton Icon="@Icons.Material.Outlined.Preview" Color="Color.Default" @onclick="(() => OpenFileDialogAsync(item))"></MudIconButton>
+                        @*  <MudIconButton Icon="@Icons.Material.Outlined.Preview" Color="Color.Default" @onclick="(() => OpenFileInWindowAsync(item))"></MudIconButton *@
+                    </MudTooltip>
+                    <MudTooltip Text="Скачать">
+                        <MudIconButton Icon="@Icons.Material.Outlined.FileDownload" Color="Color.Success" @onclick="@(async() => {await DownloadPdf(item); })"></MudIconButton>
+                    </MudTooltip>
+                    <MudTooltip Text="Удалить">
+                        <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error" aria-label="delete" @onclick="(() => DeleteItemAsync(item))"></MudIconButton>
+                    </MudTooltip>
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="Кол-во записей страницы" PageSizeOptions="new int[]{50, 100}" />
+            </PagerContent>
+        </MudTable>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+}

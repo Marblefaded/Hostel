@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits ApplicationViewTemplateScreen
+
+<MudDialog>
+    <DialogContent>       
+        <div class="col-6" style="height: 100%;">
+            @if (!string.IsNullOrEmpty(Data))
+            {
+                <object id="pdfBox" data="data:application/pdf;base64,@Data" type="application/pdf" class="pdfLarge" style="min-height: 600px;min-width: 500px;text-align: center;"></object>
+            }
+        </div>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" data-bs-dismiss="modal" @onclick="@(async() => {await DownloadPdf(mTemplateItem); })" Style="margin-right:10px">
+            Скачать
+        </MudButton>        
+    </DialogActions>
+</MudDialog>
+

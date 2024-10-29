@@ -1,0 +1,17 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #FF8E00;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-link {
+    flex: 1 0 0%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}

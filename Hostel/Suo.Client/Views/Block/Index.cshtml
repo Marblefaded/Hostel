@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #424242;
+    }
+
+    .pict {
+        height: 100%;
+        position: relative;
+    }
+
+        .pict img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+</style>
+
+<body>
+    <div class="pict">
+        <picture>
+            <source media="(max-width: 799px)" srcset="~/ErrorFinalSmall.png" />
+            <source media="(min-width: 800px)" srcset="~/ErrorFinal.png" />
+            <img align="middle" src="~/ErrorFinal.png" alt="Закрыто" />
+        </picture>
+    </div>
+</body>

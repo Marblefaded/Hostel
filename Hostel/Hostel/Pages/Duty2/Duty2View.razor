@@ -1,0 +1,170 @@
+﻿@page "/Duty2"
+@inherits Duty2ViewModel
+
+
+
+
+
+<AuthorizeView Roles="Administrator,SysAdmin, Headman">
+    <Authorized>
+    @*<div>*@
+    <div class="m-1 mt-3 filtersDuty hideWhenPrint" style="">
+        @*<div>*@
+        <select class="form-control form-control-sm m-1 " style="border-radius: 0;width: 300px;" @bind-value="FloursSelected" placeholder="Выберите этаж..." @bind-value:event="oninput">
+            <option value="@(0)" selected disabled>Выберите этаж</option>
+            @foreach (var floor in Flouts)
+            {
+                <option value="@floor.Key">@floor.Value</option>
+            }
+        </select>
+        <select class="form-control form-control-sm m-1 width: 300px;" style="border-radius: 0;width: 300px;" @bind-value="SelectedMount" placeholder="Месяц" @bind-value:event="oninput">
+            @foreach (var mount in Mounts)
+            {
+                <option value="@mount.Key">@mount.Value</option>
+            }
+        </select>
+        <select class="form-control form-control-sm m-1 width: 300px;" style="border-radius: 0;width: 300px;" @bind-value="SelectedYear" placeholder="Год" @bind-value:event="oninput">
+            @foreach (var year in Years)
+            {
+                <option value="@year">@year</option>
+            }
+        </select>
+        <MudButton Disabled="@processingSaving" Class="m-1" StartIcon="@Icons.Material.Outlined.Save" @onclick="SaveDutys" Variant="Variant.Outlined" Color="Color.Error">
+            @if (processingSaving)
+            {
+                <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                <MudText Class="ms-2">Подождите..</MudText>
+            }
+            else
+            {
+                <MudText Class="ms-2">Сохранить в бд</MudText>
+            }
+        </MudButton>
+        <MudButton Class="m-1" Disabled="@processingSaving" StartIcon="@Icons.Material.Outlined.PictureAsPdf" Variant="Variant.Outlined" @onclick="PrintPDF" Color="Color.Error">
+            Скачать PDF
+        </MudButton>
+        @*</div>*@
+    </div>
+
+
+    @if (FloursSelected != 0 && CalendarModel != null)
+    {
+        <div class="p-3 h-100 w-100 hideWhenPrint" id="draganddropcontainer">
+            <div class="row">
+                <div class="col-10">
+                    <table class="h-100 w-100 droptable" style="table-layout: fixed;">
+                        <thead>
+                            <tr>
+                                <th class="thClass">Понедельник</th>
+                                <th class="thClass">Вторник</th>
+                                <th class="thClass">Среда</th>
+                                <th class="thClass">Четверг</th>
+                                <th class="thClass">Пятница</th>
+                                <th class="thClass">Суббота</th>
+                                <th class="thClass">Воскресенье</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var week in CalendarModel.Calendar)
+                            {
+                                <tr>
+                                    @foreach (var day in week)
+                                    {
+                                        if (day.Date != null)
+                                        {
+                                            <td class="dropitem tdClass @(day.DutyViewModel == null ? "" : "ui-state-highlight")" id="tdday@(day.Date.GetValueOrDefault().Day)" data-roomnumber="@(day.DutyViewModel == null ? "" : day.DutyViewModel.RoomNumber)" data-roomid="@(day.DutyViewModel == null ? "" : day.DutyViewModel.RoomId)">
+                                                <div class="" style="">
+                                                    @day.Date.GetValueOrDefault().ToString("dd")
+                                                </div>
+
+
+                                                <p class="" style="text-align:center; font-size:32px; height:25px;">
+                                                    @(day.DutyViewModel == null ? "" : day.DutyViewModel.RoomNumber)
+                                                </p>
+
+
+                                                <div style="text-align:center; height:20px;" class="">
+                                                    <div id="removebtntdday@(day.Date.GetValueOrDefault().Day)" class="displaynone">
+                                                        <MudIconButton Icon="@Icons.Material.Filled.Close" Color="Color.Error" Class="p-0" aria-label="delete" @onclick="(e => RemoveItemInDisplay(day))"></MudIconButton>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="tdClass"></td>
+                                        }
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-2">
+                    <div class="dragroomitems">
+                        @foreach (var room in Rooms)
+                        {
+                            <div class="dragroomitem" style="" data-room="@room.NumberRoom" data-roomid="@room.RoomId">@room.NumberRoom</div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+
+
+    @if (IsPrinting && FloursSelected != 0 && PdfCalendarModel != null)
+    {
+        <div id="PrintingTable" class=" mr-3 mt-3 mb-1" style="background-color:white!important;background:white!important;">
+            <h1 style="text-align:center;color:black;" >График дежурств на @(Mounts[SelectedMount])</h1>
+            <table class="h-100 w-100 tableCalendar" style="table-layout: fixed; color:black;     background-color:white;">
+                <thead>
+                    <tr>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Понедельник</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Вторник</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Среда</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Четверг</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Пятница</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Суббота</th>
+                        <th class="thClass" style="background-color:white!important;background:white!important;">Воскресенье</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var week in PdfCalendarModel.Calendar)
+                    {
+                        <tr>
+                            @foreach (var day in week)
+                            {
+                                if (day.Date != null)
+                                {
+                                    <td class="tdClass" style="background-color:white!important;background:white!important;">
+                                        <div class="" style="">
+                                            @day.Date.GetValueOrDefault().ToString("dd")
+                                        </div>
+                                        <p class="" style="text-align:center; font-size:32px; height:25px;">
+                                            @(day.DutyViewModel == null ? "" : day.DutyViewModel.RoomNumber)
+                                        </p>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td class="tdClass" style="background-color:white!important;background:white!important;"></td>
+                                }
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+

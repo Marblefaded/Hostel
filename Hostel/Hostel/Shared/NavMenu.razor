@@ -1,0 +1,74 @@
+@using Suo.Admin.Data.Services
+
+@inject NavigationManager UriHelper
+
+
+<header>
+    <AuthorizeView Roles="Administrator">
+        <nav class="navbar" style="z-index:10">
+            <div class="row p-0 m-0">
+                @*@onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "User", true))"*@
+                <div class="nav-link" href="./User">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Проживающие
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                @*@onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "UserRoom", true))"*@
+                <NavLink class="nav-link" href="UserRoom">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Комнаты
+                </NavLink>
+            </div>
+            <div class="row p-0 m-0">
+                @*@onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "Roles", true))"*@
+                <NavLink class="nav-link" href="Roles">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Роли
+                </NavLink>
+            </div>
+            @*<div class="row p-0 m-0">
+                <span class="nav-link" @onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "Anbieter", true))">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Anbieter
+                </span>
+            </div>*@
+            <div class="row p-0 m-0">
+                @*@onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "Post", true))"*@
+                <NavLink class="nav-link" href="Post">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Публикации
+                </NavLink>
+            </div>
+            <div class="row p-0 m-0">
+                @*@onclick="@(() => UriHelper.NavigateTo(UriHelper.BaseUri + "Post", true))"*@
+                <NavLink class="nav-link" href="ExportData">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Экспорт данных
+                </NavLink>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #003d84; border:none; ">
+                    Выпадающий список
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="AllApplications">Все заявления</a></li>
+                    <li><a class="dropdown-item" href="Duty">Расписание дежурств</a></li>
+                    <li><a class="dropdown-item" href="ApplicationTypes">Виды заявлений</a></li>
+                    <li><a class="dropdown-item" href="Excel">Excel</a></li>
+                    <li><a class="dropdown-item" href="LogApplication">LogMessageEntry</a></li>
+                </ul>
+            </div>
+            <div class="row p-0 m-0">
+                <span href="./" class="nav-link" @onclick="@(()=>LogOut())" type="submit">
+                    <span class="glyphicon glyphicon-sign" aria-hidden="true"></span>Logout
+                </span>
+            </div>
+        </nav>
+    </AuthorizeView>
+</header>
+
+@code {
+    [Inject] private AuthenticationStateProvider provider { get; set; }
+
+    public void LogOut()
+    {
+
+        ((HostelAuthenticationStateProvider)provider).MarkUserAsLoggedOut();
+
+    }
+}

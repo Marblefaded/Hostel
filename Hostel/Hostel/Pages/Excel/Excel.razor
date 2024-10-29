@@ -1,0 +1,105 @@
+﻿@page "/Excel"
+@inherits ExcelView
+
+<AuthorizeView Roles="Administrator, SysAdmin">
+    <Authorized>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-16 col-md-auto">
+                <div class="my-3 text-center">
+                    <h3>Загрузка данных</h3>
+                </div>
+                <div class="my-3 text-center">
+                        <MudButton Variant="Variant.Outlined" Color="Color.Success" @onclick="@LoadFiles">Импорт проживающих</MudButton>
+                        <InputFile id="loaderImage" style="display:none" OnChange="@SaveFiles" multiple />
+                </div>
+                <AuthorizeView Context="sys" Roles="SysAdmin">
+                    <div class="my-3 text-center">
+                            <MudButton Variant="Variant.Outlined" Color="Color.Error" @onclick="@ConfirmClear">Очистить все таблицы</MudButton>
+                    </div>
+                </AuthorizeView>
+                <br />
+            </div>
+        </div>
+    </div>
+    @if (flagForProcessing)
+    {
+        <div class="сontainer">
+            <div class="d-flex justify-content-center">
+                <div class="col-8 col-md-auto">
+                    <div class="d-flex justify-content-between">
+                        <div style="margin-top:10px; margin-right:90px;">
+                            <MudButton Variant="Variant.Outlined" Color="Color.Error" @onclick="@ProcessExcelFile">Заполнить таблицу</MudButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@if (flag)
+{
+    <MudPaper Height="0px" Width="100%">
+        <MudContainer MaxWidth="MaxWidth.False">
+            <MudPaper Height="0px" Width="100%" Class="mud-theme-primary">
+                <div class="with-y-scroll-80 castomScrol">
+                    <MudSimpleTable Bordered="@bordered" Style="overflow-x: auto; color: white; background-color: #434343;">
+                        <thead>
+                            <tr>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Очество</th>
+                                <th>Номер телефона</th>
+                                <th>Факультет</th>
+                                <th>Курс</th>
+                                <th>Группа</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ListNewUser != null)
+                            {
+                                @foreach (var i in ListNewUser)
+                                {
+                                    <tr>
+                                        <td>@i.Name</td>
+                                        <td>@i.Surname</td>
+                                        <td>@i.Secondname</td>
+                                        <td>@i.PhoneNumber</td>
+                                        <td>@i.UserDeportament</td>
+                                        <td>@i.UserCourse</td>
+                                        <td>@i.UserGroup</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </MudSimpleTable>
+                </div>
+            </MudPaper>
+        </MudContainer>
+    </MudPaper>
+}
+
+@if (ConfirmModel.DialogIsOpen)
+{
+    <Confirmation ViewModel="ConfirmModel" ClearTables="ClearTables"></Confirmation>
+}
+
+@if (ErrorModel.DialogIsOpen)
+{
+    <ErrorMessage ViewModel="ErrorModel"></ErrorMessage>
+}
+
+
+
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+}

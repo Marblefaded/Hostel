@@ -1,0 +1,44 @@
+﻿@model HistoryItemViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center" style="color: white">
+    <h1 class="display-4">История заявлений</h1>
+    <br/>
+</div>
+
+@foreach (var item in Model.Claims)
+{
+
+    @*<div class="row" style="color:white;">*@
+    @*<div class="card">
+        <div class="card-title">@item.CreateDate</div>
+
+        <div class="card-body">
+            @*       <div class="col">@item.ClaimType</div>
+        <div class="col">@item.ClaimTemplate</div>*@
+            @*<div>@item.ClaimJson</div>
+        </div>
+    </div>*@
+    @*</div>*@
+
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 col-md-auto">
+                <div class="card text-center mb-4" style="width: 14rem; margin-right: 60px; background-color: #424242">
+                    <div class="card-body" style="color: white">
+                        <h5 class="card-title">
+                            @item.ClaimTemplate
+                        </h5>
+                        <p class="card-text">@item.ClaimJson</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        @item.CreateDate
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,78 @@
+﻿@page "/Features"
+
+<AuthorizeView Roles="Administrator,SysAdmin">
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-4 col-md-auto">
+                <br />
+                <h3 style="margin-right: 25px">Функции системы</h3>
+                <br />
+            </div>
+        </div>
+    </div>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 col-md-auto">
+                <div class="d-flex justify-content-between">
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardHeader>
+                            <MudIcon Icon="@Icons.Material.Outlined.Article" Size="Size.Large" />
+                            <MudText Style="margin-left:5%;" Typo="Typo.h6">Заявления</MudText>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>
+                                Экспорт заявлений за день.
+                            </MudText>
+                        </MudCardContent>
+                    </MudCard>
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardHeader>
+                            <MudIcon Icon="@Icons.Material.Outlined.CleaningServices" Size="Size.Large" />
+                            <MudText Style="margin-left:5%;" Typo="Typo.h6">Дежурства</MudText>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>
+                                Отслеживание дежурств
+                                и выставление пропусков, генерация
+                                дежурств на месяц вперёд.
+                            </MudText>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="сontainer">
+        <div class="d-flex justify-content-center">
+            <div class="col-8 col-md-auto">
+                <div class="d-flex justify-content-between">
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardHeader>
+                            <MudIcon Icon="@Icons.Material.Outlined.Folder" Size="Size.Large" />
+                            <MudText Style="margin-left:5%;" Typo="Typo.h6">Данные</MudText>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>
+                                Сохранение и удаление
+                                документов, и других данных.
+                            </MudText>
+                        </MudCardContent>
+                    </MudCard>
+                    <MudCard Class="card-main" Style="height: 250px; width: 250px;">
+                        <MudCardHeader>
+                            <MudIcon Icon="@Icons.Material.Outlined.Image" Size="Size.Large" />
+                            <MudText Style="margin-left:5%;" Typo="Typo.h6">Публикации</MudText>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudText>
+                                Создание публикаций
+                                для студентов, информирующих об
+                                изменениях в общежитии.
+                            </MudText>
+                        </MudCardContent>
+                    </MudCard>
+                </div>
+            </div>
+        </div>
+    </div>
+</AuthorizeView>

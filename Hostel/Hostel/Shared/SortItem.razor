@@ -1,0 +1,25 @@
+﻿<span @onclick="@(() => OnClickSorting())" class="cursor">
+    @if (ChildContent != null)
+    {
+        @ChildContent
+    }
+    else
+    {
+        @Title
+    }
+</span>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Column { get; set; }
+    [Parameter] public EventCallback<KeyValuePair<string, string>> Sort { get; set; }
+    public bool IsDesc { get; set; } = true;
+
+    private void OnClickSorting()
+    {
+        Sort.InvokeAsync(new KeyValuePair<string, string>(Column, IsDesc ? "desc" : "asc"));
+
+        IsDesc = !IsDesc;
+    }
+}

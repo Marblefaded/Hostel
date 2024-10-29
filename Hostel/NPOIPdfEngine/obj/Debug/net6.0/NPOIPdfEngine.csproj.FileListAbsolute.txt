@@ -1,0 +1,13 @@
+D:\Hostel\Hostel\NPOIPdfEngine\bin\Debug\net6.0\NPOIPdfEngine.deps.json
+D:\Hostel\Hostel\NPOIPdfEngine\bin\Debug\net6.0\NPOIPdfEngine.dll
+D:\Hostel\Hostel\NPOIPdfEngine\bin\Debug\net6.0\NPOIPdfEngine.pdb
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.AssemblyInfo.cs
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.dll
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\refint\NPOIPdfEngine.dll
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.pdb
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\ref\NPOIPdfEngine.dll
+D:\Hostel\Hostel\NPOIPdfEngine\obj\Debug\net6.0\NPOIPdfEngine.sourcelink.json

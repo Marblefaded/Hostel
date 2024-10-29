@@ -1,0 +1,13 @@
+D:\Hostel\Hostel\GlobalSpecialWords\bin\Debug\net6.0\GlobalSpecialWords.deps.json
+D:\Hostel\Hostel\GlobalSpecialWords\bin\Debug\net6.0\GlobalSpecialWords.dll
+D:\Hostel\Hostel\GlobalSpecialWords\bin\Debug\net6.0\GlobalSpecialWords.pdb
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.csproj.AssemblyReference.cache
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.AssemblyInfoInputs.cache
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.AssemblyInfo.cs
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.csproj.CoreCompileInputs.cache
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.dll
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\refint\GlobalSpecialWords.dll
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.pdb
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\ref\GlobalSpecialWords.dll
+D:\Hostel\Hostel\GlobalSpecialWords\obj\Debug\net6.0\GlobalSpecialWords.sourcelink.json

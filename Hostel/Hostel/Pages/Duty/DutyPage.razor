@@ -1,0 +1,353 @@
+﻿@page "/Duty"
+@using Microsoft.AspNetCore.Mvc.Rendering;
+@inherits DutyUi
+<AuthorizeView Roles="Administrator,SysAdmin, Headman">
+    <Authorized>
+    <div>
+        <div class="сontainer hideWhenPrint">
+            <div class="d-flex justify-content-center">
+                <div class="col-3 col-md-auto">
+                    <br />
+                    <h3>Расписание дежурств</h3>
+                    <div class="d-flex justify-content-between" style="margin-left:30px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="сontainer hideWhenPrint">
+            <div class="d-flex justify-content-center">
+                <div class="col-3 col-md-auto">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <MudButton StartIcon="@Icons.Material.Outlined.SettingsSuggest" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>DutyGenerator())">
+                                Сгенерировать
+                            </MudButton>
+                            <MudButton StartIcon="@Icons.Material.Outlined.FilterAlt" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>EditOrderDialog(EditViewModel))">
+                                Установить порядок
+                            </MudButton>
+                            <MudButton Disabled="@processing" StartIcon="@Icons.Material.Outlined.Save" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=>SaveMonth())">
+                                @if (processing)
+                                {
+                                    <MudProgressCircular Class="ms-n1" Size="Size.Small" Indeterminate="true" />
+                                    <MudText Class="ms-2">Подождите..</MudText>
+                                }
+                                else
+                                {
+                                    <MudText Class="ms-2">Сохранить</MudText>
+                                }
+                            </MudButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="сontainer hideWhenPrint">
+            <div class="d-flex justify-content-center">
+                <div class="col-8 col-md-auto" >
+                    <div class="d-flex justify-content-between">
+                        <EditForm Context="item" Model="@EditViewModel" class="small-select" style="margin-right:5%;">
+                            <InputSelect @bind-Value="@EditViewModel.InputYear" class="form-select">
+                                <option @onclick="DutyLoader" value=2023>2023</option>
+                                <option @onclick="DutyLoader" value=2024>2024</option>
+                                <option @onclick="DutyLoader" value=2025>2025</option>
+                            </InputSelect>
+                        </EditForm>
+                        <Dropdown TItem="int" OnSelected="@OnSelected" Load="DutyLoader">
+                            <InitialTip>
+                                @(char.ToUpper(EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU"))[0]) + EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")).Substring(1))
+                                @if (EditViewModel.AllDutys.Any(x => x.Date.Month == EditViewModel.Date.Month && x.Date.Year == EditViewModel.InputYear) == true)
+                                {
+                                    <span>
+                                        @IconFragments.IconChek
+                                    </span>
+                                }
+                            </InitialTip>
+                            <ChildContent>
+                                <DropdownListItem Context="Context2" Item="@list[0]">
+                                    Январь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 1 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[1]">
+                                    Февраль @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 2 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[2]">
+                                    Март @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 3 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[3]">
+                                    Апрель @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 4 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[4]">
+                                    Май @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 5 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[5]">
+                                    Июнь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 6 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[6]">
+                                    Июль @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 7 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[7]">
+                                    Август @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 8 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[8]">
+                                    Сентябрь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 9 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[9]">
+                                    Октябрь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 10 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[10]">
+                                    Ноябрь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 11 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                                <DropdownListItem Context="Context2" Item="@list[11]">
+                                    Декабрь @if (EditViewModel.AllDutys.Any(x => x.Date.Month == 12 && x.Date.Year == EditViewModel.InputYear) == true)
+                                    {
+                                        <span>
+                                            @IconFragments.IconChek
+                                        </span>
+                                    }
+                                </DropdownListItem>
+                            </ChildContent>
+                        </Dropdown>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (emptyflag == true)
+        {
+            <div class="hideWhenPrint" style="margin-top:22px; text-align: center">
+                <h2 hideWhenPrint>За выбраный месяц нет записей, необходимо сгенерировать расписание.</h2>
+            </div>
+        }
+
+        @if (flag == true)
+        {
+            <div class="hideWhenPrint" style="margin:6px">
+                <MudSimpleTable Bordered="@bordered" Style="overflow-x:hidden; overflow-y:hidden">
+                    <tr>
+                        @if (EditViewModel.Date.Year > 2000)
+                        {
+                            <td colspan="7">
+                                <div class="floor" style=" text-transform: capitalize; margin-left:5px">
+                                    @EditViewModel.Date.ToString("MMMM", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")).ToUpper()
+                                    @EditViewModel.InputYear
+                                    @if (!flagNeedSaveChanges)
+                                    {
+                                        <MudButton Style="float:right" StartIcon="@Icons.Material.Outlined.FileDownload" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=> Print())">PDF</MudButton>
+                                    }
+                                    else
+                                    {
+                                        <MudButton Disabled="true" Style="float:right" StartIcon="@Icons.Material.Outlined.FileDownload" Variant="Variant.Outlined" Color="Color.Error" @onclick="@(()=> Print())">PDF</MudButton>
+                                    }
+                                </div>
+                            </td>
+                        }
+                    </tr>
+                    @for (int j = 0; j <= AllDaysList.Where(x => ((int)x.GetValueOrDefault().DayOfWeek) % 7 == 0).Count(); j++)
+                    {
+                        <tr>
+                            @for (var i = j * 7; i < (j * 7) + 7 && i < AllDaysList.Count; i++)
+                            {
+
+                                var item = AllDaysList[i];
+                                if (item == null)
+                                {
+                                    <td class="day-number">
+                                        <span class="weekName"> </span>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td class="day-number">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="weekName">@item?.ToString("dddd", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")).ToUpper() </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="weekNameNumber"> @item?.ToString("dd", System.Globalization.CultureInfo.GetCultureInfo("ru-RU")).ToUpper()</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <span class="dutys">
+                                                    @SelectDutyFor3floor(item, 3).RoomNumber
+                                                    @if (flagNeedSaveChanges)
+                                                    {
+                                                        <input type="checkbox" disabled />
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (SelectDutyFor3floor(item, 3).NotCompliteDuty == "true")
+                                                        {
+                                                            <input type="checkbox" checked @onchange='()=> Change(SelectDutyFor3floor(item, 3))' />
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" @onchange='()=> Change(SelectDutyFor3floor(item, 3))' />
+                                                        }
+                                                    }
+                                                </span>
+                                                <span class="dutys">
+                                                    @SelectDuty(item, 4, "l").RoomNumber
+                                                    @if (flagNeedSaveChanges)
+                                                    {
+                                                        <input type="checkbox" disabled />
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (SelectDuty(item, 4, "l").NotCompliteDuty == "true")
+                                                        {
+                                                            <input type="checkbox" checked @onchange='()=> Change(SelectDuty(item, 4,"l"))' />
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" @onchange='()=> Change(SelectDuty(item, 4,"l"))' />
+                                                        }
+                                                    }
+                                                </span>
+                                                <span class="dutys">
+                                                    @SelectDuty(item, 5, "l").RoomNumber
+                                                    @if (flagNeedSaveChanges)
+                                                    {
+                                                        <input type="checkbox" disabled />
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (SelectDuty(item, 5, "l").NotCompliteDuty == "true")
+                                                        {
+                                                            <input type="checkbox" checked @onchange='()=> Change(SelectDuty(item, 5,"l"))' />
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" @onchange='()=> Change(SelectDuty(item, 5,"l"))' />
+                                                        }
+                                                    }
+                                                </span>
+                                            </div>
+                                            <div class="col-6">
+                                                <span class="dutys">
+                                                    &nbsp; @*это пробел*@
+                                                    @*@SelectDuty(item, 3, "r").RoomNumber
+                                    @if (SelectDuty(item, 3, "r").NotCompliteDuty == "true")
+                                    {
+                                    <input type="checkbox" checked @onchange='()=> Change(SelectDuty(item, 3,"r"))' />
+                                    }
+                                    else
+                                    {
+                                    <input type="checkbox" @onchange='()=> Change(SelectDuty(item, 3,"r"))' />
+                                    }*@
+                                                </span>
+                                                <span class="dutys">
+                                                    @SelectDuty(item, 4, "r").RoomNumber
+                                                    @if (flagNeedSaveChanges)
+                                                    {
+                                                        <input type="checkbox" disabled />
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (SelectDuty(item, 4, "r").NotCompliteDuty == "true")
+                                                        {
+                                                            <input type="checkbox" checked @onchange='()=> Change(SelectDuty(item, 4,"r"))' />
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" @onchange='()=> Change(SelectDuty(item, 4,"r"))' />
+                                                        }
+                                                    }
+                                                </span>
+                                                <span class="dutys">
+                                                    @SelectDuty(item, 5, "r").RoomNumber
+                                                    @if (flagNeedSaveChanges)
+                                                    {
+                                                        <input type="checkbox" disabled />
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (SelectDuty(item, 5, "r").NotCompliteDuty == "true")
+                                                        {
+                                                            <input type="checkbox" checked @onchange='()=> Change(SelectDuty(item, 5,"r"))' />
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" @onchange='()=> Change(SelectDuty(item, 5,"r"))' />
+                                                        }
+                                                    }
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                }
+
+
+                            }
+                        </tr>
+                    }
+                </MudSimpleTable>
+            </div>
+        }
+    </div>
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+@if (flag2 == true)
+{
+    <DutyForMonth AllDaysList="@AllDaysList" EditViewModel="EditViewModel"></DutyForMonth>
+}
+

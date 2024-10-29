@@ -1,0 +1,62 @@
+@using System.Text.Json
+@model Post
+@inject IConfiguration Configuration
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Title</h3>
+        <p class="m-0">@Model.CreateDate.ToString("dd:MM:yyyy")</p>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.ListImageJson))
+    {
+        <div class="img-block">
+            @{ List<string> listImg = JsonSerializer.Deserialize<List<string>>(Model.ListImageJson); }
+            @if (listImg.Count > 1)
+            {
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        @for (var i = 0; i < listImg.Count; i++)
+                        {
+                            <div class="carousel-item @(i == 0 ? "" : "active")">
+                                @if (@listImg[i].IndexOf(".pdf") > 0)
+                                {
+                                    <a class="d-block w-100" href="@Configuration["AdminProjectUrl"]Accets/@listImg[i]">
+                                        <img src="~/pdf.png"/>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <img src="@Configuration["AdminProjectUrl"]Accets/@listImg[i]" class="d-block w-100" alt="...">
+                                }
+                            </div>
+                        }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            }
+            else
+            {
+                @if (@listImg[0].IndexOf(".pdf") > 0)
+                {
+                    <a href="@Configuration["AdminProjectUrl"]Accets/@listImg[0]">
+                        <img src="~/pdf.png" class="d-block w-100" />
+                    </a>
+                }
+                else
+                {
+                    <img src="@Configuration["AdminProjectUrl"]Accets/@listImg[0]" class="d-block w-100" alt="...">
+                }
+            }
+        </div>
+    }
+    <div class="card-body">
+        <p class="m-0">@Model.Text</p>
+    </div>
+</div>

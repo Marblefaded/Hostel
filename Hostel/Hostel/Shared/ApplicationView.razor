@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@inherits ApplicationViewScreen
+
+@* <div class="modal" id="ApplicationView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" style="color:#424242; background-color:#424242;">
+            <div class="modal-header">
+                <span style="top: 20px; color: white;">Просмотр PDF</span>&nbsp;
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-6">
+                    <div>
+                        @if (!string.IsNullOrEmpty(Data))
+                        {
+                            <object id="pdfBox" data="data:application/pdf;base64,@Data" type="application/pdf" class="pdfLarge" style="height: 650px; width: 760px; margin-top:10px;"></object>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <MudButton Variant="Variant.Filled" Color="Color.Success" data-bs-dismiss="modal" @onclick="@(async() => {await DownloadPdf(mCurrentItem); })" Style="margin-right:10px">
+                    Скачать
+                </MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Dark" data-bs-dismiss="modal">
+                    Закрыть
+                </MudButton>
+            </div>
+        </div>
+    </div>
+</div> *@
+<MudDialog>
+    <DialogContent>
+        <div class="col-6" style="height: 100%;">
+            @if (!string.IsNullOrEmpty(Data))
+            {
+                <object id="pdfBox" data="data:application/pdf;base64,@Data" type="application/pdf" class="pdfLarge" style="min-height: 600px;min-width: 500px;text-align: center;"></object>
+            }
+        </div>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" data-bs-dismiss="modal" @onclick="@(async() => {await DownloadPdf(mCurrentItem); })" Style="margin-right:10px">
+            Скачать
+        </MudButton>
+    </DialogActions>
+</MudDialog>

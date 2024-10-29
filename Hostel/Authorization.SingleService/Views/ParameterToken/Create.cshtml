@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Suo.Autorization.SingleService.Models.UserData
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Authorization.SingleService.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<div class="container h-100">
+
+    <form asp-action="Register" asp-controller="ParameterToken" method="post" class="h-100">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.UserDeviceUnfo)
+
+            <div class="form-horizontal">
+                <h3 class="heading">Регистрация</h3>
+                
+                <div class="form-group" style="max-width: 420px; margin-bottom: 15px">
+                    <i class="fa fa-user"></i>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder="Email"} })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.UserDeviceUnfo, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group" style="max-width: 420px; margin-bottom: 15px">
+                    @* <input type="text" name="password" class="form-control" id="inputPassword" placeholder="Пароль">*@
+                    <i class="fa fa-lock"></i>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder="Пароль", id = "password-input", type="password" } })
+                    <a href="#" class="fa fa-eye" onclick="return show_hide_password(this);"></a>
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group" style="max-width: 420px; margin-bottom: 15px">
+                    @* <input type="text" name="confirmpassword" class="form-control" id="inputConfirmPassword" placeholder="Подтверждение пароля">*@
+                    <i class="fa fa-lock"></i>
+                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", placeholder="Подтверждение пароля", id = "password-input2", type="password" } })
+                    <a href="#" class="fa fa-eye" onclick="return show_hide_password2(this);"></a>
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <br />
+                    @*<input type="button" id="btnSubmit" value="Submit" />*@
+                    <button type="submit" class="login-btn" id="btnSubmit">Зарегистрироваться</button>
+                </div>
+                
+            </div>
+        }
+    </form>
+</div>
+
+
+
+<script>
+    function show_hide_password(target) {
+        var input = document.getElementById('password-input');
+        if (input.getAttribute('type') == 'password') {
+            target.classList.add('fa-eye-slash');
+            input.setAttribute('type', 'text');
+        } else {
+            target.classList.remove('fa-eye-slash');
+            input.setAttribute('type', 'password');
+        }
+        return false;
+    }
+
+    function show_hide_password2(target) {
+        var input = document.getElementById('password-input2');
+        if (input.getAttribute('type') == 'password') {
+            target.classList.add('fa-eye-slash');
+            input.setAttribute('type', 'text');
+        } else {
+            target.classList.remove('fa-eye-slash');
+            input.setAttribute('type', 'password');
+        }
+        return false;
+    }
+
+</script>
